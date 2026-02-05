@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaUserCircle, FaSun, FaLanguage, FaShieldAlt, FaHistory, FaSignOutAlt, FaUserPlus, FaSignInAlt, FaFire, FaTrophy, FaCoins, FaChartLine, FaUserAstronaut } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdVerified, MdStars, MdExplore } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 function Profil() {
   return (
     <>
@@ -27,12 +28,16 @@ function Profil() {
                   </div>
                 </div>
                 <div className="flex gap-2 w-full">
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm">
-                    <FaSignInAlt /> Giriş
-                  </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold border border-slate-200 hover:bg-slate-100 transition-all text-sm text-slate-700">
+                  <NavLink to="/login"  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm">
+                    <button >
+                      <FaSignInAlt /> Giriş
+                    </button>
+                  </NavLink>
+                  <NavLink to="/register " className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl font-semibold hover:bg-slate-200 transition-all text-sm">
+                  <button>
                     <FaUserPlus /> Qeydiyyat
                   </button>
+                  </NavLink>
                 </div>
               </div>
 
