@@ -8,7 +8,7 @@ function Header() {
     return (
         <>
             <section>
-                <div className='px-6 py-4 lg:px-30 lg:py-6 lg:text-[16px] flex justify-between text-[10px] font-[600] uppercase bg-[#1c3331] text-white'>
+                <div className='px-6 py-4 lg:px-30 lg:py-6 lg:text-[16px] flex justify-between text-[10px] font-[600] uppercase bg-[#0f172a] text-white'>
                     <NavLink to="/profil">
                         <div className='flex flex-col items-center gap-1 relative group'>
                             <FaUserAstronaut className='lg:text-[25px]' />
