@@ -11,6 +11,9 @@ import List from './page-component/Experience/list.jsx';
 import Globe from './page-component/Experience/globe.jsx';
 import Cardsİnfo from './page-component/Experience/cardsİnfo.jsx';
 
+import Login from './page-component/Login/login.jsx';
+import Register from './page-component/Login/register.jsx';
+
 function App() {
   return (
     <>
@@ -29,7 +32,8 @@ function App() {
           <Route path= "/experience/list" element={<List />} />
           <Route path= "/experience/globe" element={<Globe />} />
           <Route path= "/experience/cardsinfo" element={<Cardsİnfo />} />
-
+          <Route path= "/login" element={<Login />} />
+          <Route path= "/register" element={<Register />} />
         </Routes>
       </section>
 
