@@ -1,8 +1,96 @@
 import React from 'react'
-
+import { GiFlyingFlag, GiWorld, GiCash, GiEarthAfricaEurope, GiGoldBar, GiGlobe, GiCompass } from "react-icons/gi";
+import { MdArrowForward } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 function HomePage() {
+  const categories = [
+    {
+      id: 1,
+      title: "Bayraq - Ölkə",
+      mainIcon: <GiFlyingFlag />,
+      bgIcon: <GiFlyingFlag />,
+      gradient: "from-yellow-500 to-pink-600",
+      tag: "Xüsusi",
+      to: "/games/flag"
+    },
+    {
+      id: 2,
+      title: "Valyuta - Ölkə",
+      mainIcon: <GiCash />,
+      bgIcon: <GiGoldBar />,
+      gradient: "from-emerald-400 to-teal-600",
+      tag: "Populyar",
+      to: "/games/currency"
+    },
+    {
+      id: 3,
+      title: "Qlobal - Dünya",
+      mainIcon: <GiWorld />,
+      bgIcon: <GiGlobe />,
+      gradient: "from-green-600 to-lime-400",
+      tag: "Premium",
+      to: "/games/global"
+    },
+    {
+      id: 4,
+      title: "Qitə - Ölkə",
+      mainIcon: <GiEarthAfricaEurope />,
+      bgIcon: <GiCompass />,
+      gradient: "from-slate-800 to-slate-950",
+      tag: "Ekspert",
+      to: "/games/continent"
+    }
+  ];
   return (
     <>
+      <section className="min-h-screen py-4 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-xl md:text-3xl font-bold text-slate-900 mb-1 md:mb-4 tracking-tight">
+              Oyun <span className="text-red-600">Rejimləri</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6">
+            {categories.map((cat) => (
+              <div
+                key={cat.id}
+                className={`group relative rounded-xl md:rounded-3xl p-4 md:p-8 h-28 sm:h-36 md:h-60 flex flex-col justify-between overflow-hidden bg-gradient-to-br ${cat.gradient} text-white transform transition-all duration-500 shadow-md hover:shadow-xl hover:scale-[1.01] cursor-pointer`}
+              >
+                <div className="relative z-20">
+                  <div className="flex items-center gap-2 md:gap-5">
+                    <div className="p-2 md:p-3.5 bg-white/20 rounded-lg md:rounded-2xl backdrop-blur-sm shadow-inner transition-transform group-hover:rotate-6">
+                      <span className="text-xl md:text-3xl">{cat.mainIcon}</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="block text-[8px] md:text-[11px] font-bold uppercase tracking-[0.2em] opacity-80 mb-0.5 md:mb-1">
+                        {cat.tag}
+                      </span>
+                      <h3 className="text-sm sm:text-lg md:text-2xl font-extrabold drop-shadow-md leading-tight">
+                        {cat.title}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute left-4 bottom-0 md:left-8 z-10 translate-y-1/4 md:translate-y-1/3">
+                  <div className="text-6xl sm:text-7xl md:text-[10rem] opacity-20 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-1000 pointer-events-none origin-bottom">
+                    {cat.bgIcon}
+                  </div>
+                </div>
+
+                <NavLink to={cat.to} className="absolute right-3 bottom-3 md:bottom-8 md:right-8 z-30">
+                  <span className="flex items-center gap-1.5 text-[8px] sm:text-[9px] md:text-xs font-bold px-3 py-1.5 md:px-6 md:py-3 bg-white/20 hover:bg-white text-white hover:text-slate-900 rounded-full border border-white/30 backdrop-blur-md transition-all duration-300 uppercase shadow-lg">
+                    BAŞLA
+                    <MdArrowForward className="text-[10px] md:text-lg" />
+                  </span>
+                </NavLink>
+                <div className="absolute top-0 right-0 w-20 h-20 md:w-40 md:h-40 bg-white/10 rounded-full blur-[40px] md:blur-[80px]"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
