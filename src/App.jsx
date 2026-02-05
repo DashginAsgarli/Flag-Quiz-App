@@ -14,6 +14,11 @@ import Cardsİnfo from './page-component/Experience/cardsİnfo.jsx';
 import Login from './page-component/Login/login.jsx';
 import Register from './page-component/Login/register.jsx';
 
+import ContinentGame from './page-component/Games/ContinentGame.jsx';
+import GlobalGame from './page-component/Games/GlobalGame.jsx';
+import CurrencyGame from './page-component/Games/CurrencyGame.jsx';
+import FlagGame from './page-component/Games/FlagGame.jsx';
+
 function App() {
   return (
     <>
@@ -34,6 +39,10 @@ function App() {
           <Route path= "/experience/cardsinfo" element={<Cardsİnfo />} />
           <Route path= "/login" element={<Login />} />
           <Route path= "/register" element={<Register />} />
+          <Route path= "/games/continent" element={<ContinentGame />} />
+          <Route path= "/games/global" element={<GlobalGame />} />
+          <Route path= "/games/currency" element={<CurrencyGame />} />
+          <Route path= "/games/flag" element={<FlagGame />} />
         </Routes>
       </section>
 

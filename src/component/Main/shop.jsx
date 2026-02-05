@@ -81,7 +81,7 @@ function Shop() {
             </div>
           </div>
 
-          <div className="group relative rounded-[1.2rem] md:rounded-[1.5rem] p-5 md:p-10 overflow-hidden bg-slate-900 text-white shadow-2xl transition-all">
+          <div className="group relative rounded-[1.2rem] md:rounded-[1.5rem] p-5 md:p-10 overflow-hidden bg-slate-900 text-white shadow-2xl transition-all transform  duration-500  hover:scale-[1.02]">
             <div className="relative z-20 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8">
               <div className="text-center md:text-left space-y-2 md:space-y-4">
                 <h2 className="text-xl md:text-4xl font-black italic tracking-tighter">
