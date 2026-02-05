@@ -1,6 +1,112 @@
+import { FaCoins, FaCrown, FaGem, FaUserAstronaut, FaCartPlus } from "react-icons/fa";
+import { MdExplore, MdArrowForward, MdVerified, MdStars } from "react-icons/md";
+
 function Shop() {
   return (
     <>
+      <section className="min-h-screen py-6 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-2 md:mb-4 tracking-tight">
+              Market <span className="text-red-600">Təklifləri</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
+            <div className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-32 sm:h-36 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+              <div className="relative z-20">
+                <div className="flex items-center justify-between mb-2 md:mb-6">
+                  <div className="flex items-center gap-1.5">
+                    <div className="p-1 md:p-2.5 bg-white/30 rounded-lg backdrop-blur-sm group-hover:rotate-12 transition-transform">
+                      <MdExplore className="text-xs md:text-xl" />
+                    </div>
+                    <span className="text-[10px] md:text-sm font-semibold tracking-wider uppercase">Xüsusi</span>
+                  </div>
+                  <div className="p-1 px-2 md:p-2 bg-white/30 rounded-lg backdrop-blur-sm font-bold text-[10px] md:text-sm">US$1.99</div>
+                </div>
+                <h3 className="text-sm md:text-xl font-bold">Hoş Geldin Paketi</h3>
+              </div>
+              <div className="relative z-20 flex items-center justify-between">
+                <div className="text-2xl md:text-5xl opacity-25">
+                  <FaCoins className="group-hover:rotate-12 transition-transform text-yellow-300" />
+                </div>
+                <span className="text-lg md:text-3xl font-black italic">2.500</span>
+              </div>
+            </div>
+
+            <div className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-32 sm:h-36 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-emerald-400 to-teal-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+              <div className="relative z-20">
+                <div className="flex items-center justify-between mb-2 md:mb-6">
+                  <div className="flex items-center gap-1.5">
+                    <div className="p-1 md:p-2.5 bg-white/30 rounded-lg backdrop-blur-sm group-hover:rotate-12 transition-transform">
+                      <FaCrown className="text-xs md:text-xl text-yellow-300" />
+                    </div>
+                    <span className="text-[10px] md:text-sm font-semibold tracking-wider uppercase">Populyar</span>
+                  </div>
+                  <div className="p-1 px-2 md:p-2 bg-white/30 rounded-lg backdrop-blur-sm font-bold text-[10px] md:text-sm">US$5.99</div>
+                </div>
+                <h3 className="text-sm md:text-xl font-bold">Süper Paket</h3>
+              </div>
+              <div className="relative z-20 flex items-center justify-between">
+                <div className="text-2xl md:text-5xl opacity-25">
+                  <FaGem className="group-hover:scale-110 transition-transform text-blue-200" />
+                </div>
+                <span className="text-lg md:text-3xl font-black italic">7.500</span>
+              </div>
+            </div>
+
+            <div className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-32 sm:h-36 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-green-600 to-lime-400 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+              <div className="relative z-20">
+                <div className="flex items-center justify-between mb-2 md:mb-6">
+                  <div className="flex items-center gap-1.5">
+                    <div className="p-1 md:p-2.5 bg-white/30 rounded-lg backdrop-blur-sm group-hover:rotate-12 transition-transform">
+                      <MdStars className="text-xs md:text-xl" />
+                    </div>
+                    <span className="text-[10px] md:text-sm font-semibold tracking-wider uppercase">Premium</span>
+                  </div>
+                  <div className="p-1 bg-white/30 rounded-lg backdrop-blur-sm group-hover:bg-white/40 transition-all">
+                    <MdArrowForward className="text-xs md:text-lg transform group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+                <h3 className="text-sm md:text-xl font-bold">Reklamları Blokla</h3>
+              </div>
+              <div className="relative z-20 flex items-center justify-between">
+                <div className="text-2xl md:text-5xl opacity-25">
+                  <MdVerified className="group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="flex flex-col items-end">
+                  <span className="text-[10px] md:text-xs font-medium px-2 py-0.5 bg-white/40 rounded-full border border-white/30">Həmişəlik</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative rounded-[1.2rem] md:rounded-[1.5rem] p-5 md:p-10 overflow-hidden bg-slate-900 text-white shadow-2xl transition-all">
+            <div className="relative z-20 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8">
+              <div className="text-center md:text-left space-y-2 md:space-y-4">
+                <h2 className="text-xl md:text-4xl font-black italic tracking-tighter">
+                  VIP <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">ÜSTÜNLÜK</span>
+                </h2>
+                <p className="text-slate-400 text-[11px] md:text-base max-w-xs md:max-w-md">
+                  Özəl ikonlar və gündəlik bonus coinlər səni gözləyir.
+                </p>
+                <button className="flex items-center gap-2 px-5 py-2 md:px-8 md:py-3 bg-white text-slate-900 text-xs md:text-base font-bold rounded-lg md:rounded-xl hover:bg-slate-100 transition-colors mx-auto md:mx-0">
+                  <FaCartPlus className="text-sm" /> İNDİ YÜKSƏLT
+                </button>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2 bg-white/5 p-3 md:p-4 rounded-2xl md:rounded-3xl border border-white/10">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="w-9 h-9 md:w-14 md:h-14 bg-white/10 rounded-lg md:rounded-xl flex items-center justify-center text-base md:text-xl hover:bg-white/20 transition-all">
+                    <FaUserAstronaut className={i % 2 === 0 ? "text-blue-400" : "text-pink-500"} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-red-600/10 rounded-full blur-[60px] md:blur-[80px]"></div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

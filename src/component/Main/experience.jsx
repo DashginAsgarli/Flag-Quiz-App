@@ -15,7 +15,7 @@ function Experience() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            <NavLink to="/experience/list" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-red-600 to-pink-500 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+            <NavLink to="/experience/list" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
               <div className="relative z-20">
                 <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
                   <div className="flex items-center gap-1.5 sm:gap-2">
@@ -48,7 +48,7 @@ function Experience() {
               </div>
             </NavLink>
 
-            <NavLink to="/experience/globe" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-emerald-600 to-teal-500 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+            <NavLink to="/experience/globe" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-emerald-400 to-teal-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
               <div className="relative z-20">
                 <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
                   <div className="flex items-center gap-1.5 sm:gap-2">
