@@ -94,6 +94,28 @@ function Profil() {
                 </div>
 
               </div>
+
+              <div className="group relative rounded-2xl md:rounded-3xl p-4 md:p-6 md:py-8 overflow-hidden bg-slate-900 text-white shadow-xl">
+                <div className="relative z-20 flex items-center justify-between gap-4">
+                  <div className="text-left">
+                    <h3 className="text-base md:text-xl font-black italic tracking-tight leading-none">
+                      Dostunu <span className="text-red-600">Dəvət et</span>
+                    </h3>
+                    <p className="text-slate-400 text-[10px] md:text-xs font-bold mt-1.5 md:mt-1 opacity-80">
+                      +100 Coin qazan!
+                    </p>
+                  </div>
+
+                  <button className="px-3 py-1 md:px-6 md:py-2.5 bg-white text-slate-900 rounded-lg md:rounded-xl font-black text-[10px] md:text-xs hover:bg-red-600 hover:text-white transition-all shrink-0 shadow-lg active:scale-95">
+                    KOPYALA
+                  </button>
+                </div>
+                <div className="absolute top-0 right-0 w-16 h-16 md:w-24 md:h-24 bg-red-600/20 rounded-full blur-2xl"></div>
+                <div className="absolute -bottom-6 -left-2 text-4xl md:text-6xl opacity-10 rotate-12">
+                  <FaUserPlus />
+                </div>
+              </div>
+
             </div>
 
             <div className="lg:col-span-7 space-y-6">
@@ -118,7 +140,7 @@ function Profil() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="group relative rounded-2xl p-5 h-40 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white shadow-md hover:shadow-xl transition-all cursor-pointer">
                   <div className="relative z-20 flex justify-between items-start">
