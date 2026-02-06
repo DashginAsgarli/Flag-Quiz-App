@@ -1,5 +1,14 @@
 import { FaCoins, FaCrown, FaGem, FaUserAstronaut, FaCartPlus } from "react-icons/fa";
 import { MdExplore, MdArrowForward, MdVerified, MdStars } from "react-icons/md";
+import { MdVerifiedUser, MdFlashOn, MdSupportAgent } from "react-icons/md";
+import React from 'react';
+import {
+  FaCcVisa,
+  FaCcMastercard,
+  FaApplePay,
+  FaGooglePay
+} from 'react-icons/fa';
+
 
 function Shop() {
   return (
@@ -10,6 +19,29 @@ function Shop() {
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-2 md:mb-4 tracking-tight">
               Market <span className="text-red-600">Təklifləri</span>
             </h2>
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-4 mt-2 mb-10">
+            <div className="group flex items-center gap-3 bg-white/40 backdrop-blur-md border border-slate-200/50 px-4 py-2 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60">
+              <div className="flex -space-x-2.5">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center overflow-hidden shadow-sm transition-transform group-hover:-translate-y-0.5" >
+                    <FaUserAstronaut className={`text-[10px] md:text-xs ${i === 2 ? 'text-red-500' : 'text-slate-600'}`} />
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <p className="text-slate-600 text-[11px] md:text-sm font-medium italic leading-none">
+                  Son 5 dəqiqədə <span className="font-bold text-slate-900 not-italic">32 nəfər</span> coin aldı
+                </p>
+
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+              </div>
+            </div>
           </div>
 
           <div className="mt-10 mb-8 max-w-7xl mx-auto px-4 md:px-0">
@@ -142,6 +174,35 @@ function Shop() {
             </div>
             <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-red-600/10 rounded-full blur-[60px] md:blur-[80px]"></div>
           </div>
+
+          <div className="mt-8 md:mt-16 pt-8 md:pt-16 pb-8 md:pb-16">
+            <div className="flex flex-col items-center gap-8 md:gap-12">
+              <div className="flex items-center gap-4 md:gap-6 w-full max-w-lg px-6">
+                <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-slate-200 to-slate-300"></div>
+                <p className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-slate-400 font-black whitespace-nowrap">
+                  Ödəniş
+                </p>
+                <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-slate-200 to-slate-300"></div>
+              </div>
+              <div className="flex flex-wrap justify-center gap-6 md:gap-16 items-center opacity-60 md:opacity-40 hover:opacity-100 transition-opacity duration-700">
+                <div className="group flex flex-col items-center gap-1 md:gap-2 grayscale hover:grayscale-0 transition-all duration-500">
+                  <FaCcVisa className="text-2xl md:text-3xl text-slate-800 group-hover:text-[#1a1f71]" />
+                  <span className="text-[7px] md:text-[9px] font-black italic tracking-tighter text-slate-800">VISA</span>
+                </div>
+                <div className="group flex flex-col items-center gap-1 md:gap-2 grayscale hover:grayscale-0 transition-all duration-500">
+                  <FaCcMastercard className="text-2xl md:text-3xl text-slate-800 group-hover:text-[#eb001b]" />
+                  <span className="text-[7px] md:text-[9px] font-black italic tracking-tighter text-slate-800">MASTERCARD</span>
+                </div>
+                <div className="flex items-center grayscale hover:grayscale-0 transition-all duration-500">
+                  <FaApplePay className="text-4xl md:text-5xl text-slate-800" />
+                </div>
+                <div className="flex items-center grayscale hover:grayscale-0 transition-all duration-500">
+                  <FaGooglePay className="text-4xl md:text-5xl text-slate-800" />
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </>
