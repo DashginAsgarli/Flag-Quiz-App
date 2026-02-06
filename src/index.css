@@ -3,3 +3,7 @@
 .active {
   color: #fcfcfc; 
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
