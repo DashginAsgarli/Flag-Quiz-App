@@ -27,15 +27,10 @@ function Cardsİnfo() {
   };
   return (
     <>
-      <section className="min-h-screen py-6 md:py-10 px-3 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans">
+      <section className="min-h-screen py-6 md:py-10 px-3 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-20">
         <div className="max-w-[1400px] mx-auto">
 
           <div className="flex flex-col items-center mb-6 md:mb-12 gap-4 md:gap-6">
-            <div className="text-center">
-              <h2 className="text-2xl md:text-5xl font-black text-slate-900 mb-1 tracking-tight">
-                Dünya <span className="text-red-600 ">Atlası</span>
-              </h2>
-            </div>
 
             <div className="relative w-full max-w-[280px] md:max-w-md group">
               <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-red-500 transition-colors text-sm md:text-lg" />

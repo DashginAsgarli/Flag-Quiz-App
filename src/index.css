@@ -1,22 +1,5 @@
 @import "tailwindcss";
-/* .active {
-  font-size: clamp(10px, 12px, 20px);
-} */
 
 .active {
-  font-size: 10px;
-  font-weight: 900;
-  color: #dc2626; /* text-red-600 */
-}
-
-@media (min-width: 640px) {
-  .active {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .active {
-    font-size: 18px;
-  }
+  color: #fcfcfc; 
 }
