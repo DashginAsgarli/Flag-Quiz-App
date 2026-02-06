@@ -218,29 +218,35 @@ function Shop() {
             ))}
           </div>
 
-          <div className="mt-8 md:mt-16 pt-8 md:pt-16 pb-8 md:pb-16">
-            <div className="flex flex-col items-center gap-8 md:gap-12">
-              <div className="flex items-center gap-4 md:gap-6 w-full max-w-lg px-6">
-                <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-slate-200 to-slate-300"></div>
-                <p className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-slate-400 font-black whitespace-nowrap">
-                  Ödəniş
-                </p>
-                <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-slate-200 to-slate-300"></div>
-              </div>
-              <div className="flex flex-wrap justify-center gap-6 md:gap-16 items-center opacity-60 md:opacity-40 hover:opacity-100 transition-opacity duration-700">
-                <div className="group flex flex-col items-center gap-1 md:gap-2 grayscale hover:grayscale-0 transition-all duration-500">
-                  <FaCcVisa className="text-2xl md:text-3xl text-slate-800 group-hover:text-[#1a1f71]" />
-                  <span className="text-[7px] md:text-[9px] font-black italic tracking-tighter text-slate-800">VISA</span>
-                </div>
-                <div className="group flex flex-col items-center gap-1 md:gap-2 grayscale hover:grayscale-0 transition-all duration-500">
-                  <FaCcMastercard className="text-2xl md:text-3xl text-slate-800 group-hover:text-[#eb001b]" />
-                  <span className="text-[7px] md:text-[9px] font-black italic tracking-tighter text-slate-800">MASTERCARD</span>
-                </div>
-                <div className="flex items-center grayscale hover:grayscale-0 transition-all duration-500">
-                  <FaApplePay className="text-4xl md:text-5xl text-slate-800" />
-                </div>
-                <div className="flex items-center grayscale hover:grayscale-0 transition-all duration-500">
-                  <FaGooglePay className="text-4xl md:text-5xl text-slate-800" />
+
+          <div className="relative mt-5 mb-2 ">
+            <div className="absolute inset-0  h-[1px] top-0"></div>
+            <div className="max-w-4xl mx-auto pt-12">
+              <div className="p-6 md:p-10 ">
+                <div className="flex flex-col items-center gap-8">
+                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
+                    <div className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <FaCcVisa className="text-3xl md:text-5xl text-[#1a1f71] drop-shadow-sm" />
+                    </div>
+
+                    <div className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <FaCcMastercard className="text-3xl md:text-5xl text-[#eb001b] drop-shadow-sm" />
+                    </div>
+
+                    <div className="h-10 w-[1px] bg-slate-200 hidden md:block"></div>
+
+                    <div className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <FaApplePay className="text-5xl md:text-7xl text-black" />
+                    </div>
+
+                    <div className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <FaGooglePay className="text-5xl md:text-7xl text-slate-600" />
+                    </div>
+                  </div>
+
+                  <p className="text-center text-slate-400 text-[9px] md:text-[11px] font-medium max-w-sm leading-relaxed">
+                    Bütün əməliyyatlar bank səviyyəsində təhlükəsizlik protokolları ilə qorunur. Məlumatlarınız heç vaxt serverlərimizdə saxlanılmır.
+                  </p>
                 </div>
               </div>
             </div>
