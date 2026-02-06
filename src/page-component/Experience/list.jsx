@@ -25,7 +25,7 @@ function List() {
   );
   return (
     <>
-      <section className="min-h-screen bg-slate-50 py-8 px-4 md:px-10 font-sans">
+      <section className="min-h-screen bg-slate-50 py-8 px-4 md:px-10 font-sans mt-13 md:mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">

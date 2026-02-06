@@ -43,13 +43,8 @@ function HomePage() {
   ];
   return (
     <>
-      <section className="min-h-screen py-4 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans">
+      <section className="min-h-screen py-4 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-15">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6 md:mb-12">
-            <h2 className="text-xl md:text-3xl font-bold text-slate-900 mb-1 md:mb-4 tracking-tight">
-              Oyun <span className="text-red-600">Rejimləri</span>
-            </h2>
-          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6">
             {categories.map((cat) => (
