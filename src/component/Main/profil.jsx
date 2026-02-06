@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaUserCircle, FaSun, FaLanguage, FaShieldAlt, FaHistory, FaSignOutAlt, FaUserPlus, FaSignInAlt, FaFire, FaTrophy, FaCoins, FaChartLine, FaUserAstronaut } from "react-icons/fa";
+import { FaUserCircle, FaSun, FaLanguage, FaShieldAlt, FaHistory, FaSignOutAlt, FaUserPlus, FaSignInAlt, FaFire, FaTrophy, FaCoins, FaChartLine, FaUserAstronaut, FaCrown } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdVerified, MdStars, MdExplore } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 function Profil() {
@@ -208,6 +208,26 @@ function Profil() {
 
             </div>
           </div>
+
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-0.5 rounded-[2rem] shadow-lg shadow-orange-200/40">
+            <div className="bg-white rounded-[1.9rem] p-5 flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-yellow-100 rounded-2xl flex items-center justify-center">
+                  <FaCrown className="text-yellow-600 text-2xl animate-bounce" />
+                </div>
+                <div>
+                  <h4 className="font-black text-slate-900 italic leading-none text-lg">VIP MAĞAZA</h4>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Özəl üstünlükləri kəşf et</p>
+                </div>
+              </div>
+              <NavLink to="/shop">
+                <button className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-md">
+                  <MdKeyboardArrowRight size={24} />
+                </button>
+              </NavLink>
+            </div>
+          </div>
+
         </div>
       </section>
     </>
