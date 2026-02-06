@@ -20,6 +20,8 @@ import CurrencyGame from './page-component/Games/CurrencyGame.jsx';
 import FlagGame from './page-component/Games/FlagGame.jsx';
 
 import { CountryProvider } from './api/CountryContext.jsx';
+
+import FlagGamePlay from './page-component/Games/FlagGamePlay.jsx';
 function App() {
   return (
     <>
@@ -45,6 +47,7 @@ function App() {
             <Route path="/games/global" element={<GlobalGame />} />
             <Route path="/games/currency" element={<CurrencyGame />} />
             <Route path="/games/flag" element={<FlagGame />} />
+            <Route path='/games/flag/fplay' element={<FlagGamePlay/>}/>
           </Routes>
         </CountryProvider>
       </section>
