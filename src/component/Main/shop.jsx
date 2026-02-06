@@ -12,6 +12,43 @@ function Shop() {
             </h2>
           </div>
 
+          <div className="mt-10 mb-8 max-w-7xl mx-auto px-4 md:px-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              {[
+                { amount: "1.000", price: "0.99", popular: false },
+                { amount: "5.000", price: "4.49", popular: true },
+                { amount: "10.000", price: "8.99", popular: false }
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative flex items-center justify-between bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 cursor-pointer hover:scale-[1.02]"
+                >
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:rotate-5 transition-transform shrink-0">
+                      <FaCoins className="text-white text-xl md:text-2xl" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-slate-900 font-black text-lg md:text-2xl italic leading-none">
+                        {item.amount}
+                      </span>
+                      <span className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-wider mt-1">
+                        Gümüş Coin
+                      </span>
+                    </div>
+                  </div>
+
+                  <button className="bg-slate-900 hover:bg-red-600 text-white font-bold py-2 px-4 md:px-6 rounded-xl transition-colors text-sm md:text-base shadow-sm whitespace-nowrap">  ${item.price}</button>
+
+                  {item.popular && (
+                    <div className="absolute -top-3 left-6 bg-red-600 text-[9px] md:text-[10px] text-white px-3 py-1 rounded-full font-bold shadow-lg z-10">
+                      POPULYAR
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
             <div className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-32 sm:h-36 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
               <div className="relative z-20">
