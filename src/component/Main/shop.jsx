@@ -44,6 +44,22 @@ function Shop() {
             </div>
           </div>
 
+          <div className="flex justify-end mb-4 md:mb-6 px-4 md:px-0">
+            <div className="bg-white/80 backdrop-blur-sm border border-slate-200 px-3 py-1.5 md:px-4 md:py-2 rounded-xl md:rounded-2xl shadow-sm flex items-center gap-2 md:gap-3 hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-end leading-tight">
+                <span className="text-[8px] md:text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                  Balansın
+                </span>
+                <span className="text-sm md:text-lg font-black text-slate-900 italic">
+                  2,450
+                </span>
+              </div>
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg md:rounded-xl flex items-center justify-center shadow-md shrink-0">
+                <FaCoins className="text-white text-base md:text-xl" />
+              </div>
+            </div>
+          </div>
+
           <div className="mt-10 mb-8 max-w-7xl mx-auto px-4 md:px-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {[
