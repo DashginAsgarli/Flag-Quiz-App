@@ -5,14 +5,8 @@ import { NavLink } from 'react-router-dom';
 function Profil() {
   return (
     <>
-      <section className="min-h-screen py-8 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900">
+      <section className="min-h-screen py-8 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900 mt-10 md:mt-20">
         <div className="max-w-7xl mx-auto space-y-6">
-
-          <div className="text-center mb-10">
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 tracking-tight">
-              Profil <span className="text-red-600">Mərkəzi</span>
-            </h2>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
