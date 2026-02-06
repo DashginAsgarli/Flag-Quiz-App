@@ -28,15 +28,15 @@ function Profil() {
                   </div>
                 </div>
                 <div className="flex gap-2 w-full">
-                  <NavLink to="/login"  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm">
+                  <NavLink to="/login" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm">
                     <button >
                       <FaSignInAlt /> Giriş
                     </button>
                   </NavLink>
                   <NavLink to="/register " className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl font-semibold hover:bg-slate-200 transition-all text-sm">
-                  <button>
-                    <FaUserPlus /> Qeydiyyat
-                  </button>
+                    <button>
+                      <FaUserPlus /> Qeydiyyat
+                    </button>
                   </NavLink>
                 </div>
               </div>
@@ -97,6 +97,28 @@ function Profil() {
             </div>
 
             <div className="lg:col-span-7 space-y-6">
+
+              <div className="grid grid-cols-3 gap-2 md:gap-4 mb-6">
+                {[
+                  { label: "Doğru", value: "842", icon: <MdVerified className="text-emerald-500 text-sm md:text-base" />, bg: "bg-emerald-50" },
+                  { label: "Sıralama", value: "#12", icon: <FaChartLine className="text-blue-500 text-sm md:text-base" />, bg: "bg-blue-50" },
+                  { label: "Ölkə", value: "45", icon: <MdExplore className="text-orange-500 text-sm md:text-base" />, bg: "bg-orange-50" }
+                ].map((stat, i) => (
+                  <div key={i} className="bg-white p-1.5 md:p-4 rounded-xl md:rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center justify-center">
+                    <div className={`w-7 h-7 md:w-10 md:h-10 ${stat.bg} rounded-full flex items-center justify-center mb-1 md:mb-2 shrink-0`}>
+                      {stat.icon}
+                    </div>
+
+                    <span className="text-xs md:text-xl font-black text-slate-900 italic leading-none">
+                      {stat.value}
+                    </span>
+                    <span className="text-[8px] md:text-[10px] font-bold text-slate-400 uppercase tracking-tighter mt-0.5 md:mt-1">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="group relative rounded-2xl p-5 h-40 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white shadow-md hover:shadow-xl transition-all cursor-pointer">
                   <div className="relative z-20 flex justify-between items-start">
