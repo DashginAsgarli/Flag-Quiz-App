@@ -175,6 +175,38 @@ function Shop() {
             <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-red-600/10 rounded-full blur-[60px] md:blur-[80px]"></div>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 mt-16">
+            {[
+              {
+                icon: <MdVerifiedUser className="text-xl md:text-2xl text-emerald-500" />,
+                title: "Təhlükəsiz",
+                highlight: "ÖDƏNİŞ"
+              },
+              {
+                icon: <MdFlashOn className="text-xl md:text-2xl text-orange-500" />,
+                title: "Anında",
+                highlight: "TƏSLİMAT"
+              },
+              {
+                icon: <MdSupportAgent className="text-xl md:text-2xl text-blue-500" />,
+                title: "7/24 Canlı",
+                highlight: "DƏSTƏK",
+              }
+            ].map((feature, index) => (
+              <div key={index} className="group relative flex items-center gap-4 bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-default">
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-slate-50 rounded-xl md:rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+
+                <div className="flex flex-col">
+                  <h4 className="text-slate-900 font-black italic text-sm md:text-base leading-none tracking-tight">
+                    {feature.title} <span className="text-red-600">{feature.highlight}</span>
+                  </h4>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-8 md:mt-16 pt-8 md:pt-16 pb-8 md:pb-16">
             <div className="flex flex-col items-center gap-8 md:gap-12">
               <div className="flex items-center gap-4 md:gap-6 w-full max-w-lg px-6">
