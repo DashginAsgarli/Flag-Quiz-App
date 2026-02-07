@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import GameRul from './GameRul'
 import { MdArrowForward, MdKeyboardBackspace } from "react-icons/md";
 import { GiSandsOfTime, GiCampfire, GiDrippingSword, GiShieldEchoes, GiPortal, GiMagickTrick } from "react-icons/gi";
 function ContinentGame() {
@@ -83,6 +84,7 @@ function ContinentGame() {
               </div>
             ))}
           </div>
+          <GameRul/>
         </div>
       </section>
     </>

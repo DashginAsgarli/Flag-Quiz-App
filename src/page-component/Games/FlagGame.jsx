@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { GiStarShuriken, GiLightningSaber, GiSkullMask, GiRibbonMedal, GiTrophy, GiDeathSkull } from "react-icons/gi";
 import { MdArrowForward, MdKeyboardBackspace } from "react-icons/md";
-
+import GameRul from './GameRul'
 function FlagGame() {
   const levels = [
     {
@@ -85,6 +85,7 @@ function FlagGame() {
               </div>
             ))}
           </div>
+          <GameRul />
         </div>
       </section>
     </>
