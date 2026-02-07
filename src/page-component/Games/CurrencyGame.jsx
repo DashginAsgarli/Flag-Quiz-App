@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import GameRul from './GameRul'
 import { MdArrowForward, MdKeyboardBackspace } from "react-icons/md";
 import { GiBabyFace, GiLevelEndFlag, GiTargetDummy, GiTrophyCup, GiAbstract013, GiCrossedSwords } from "react-icons/gi";
 function CurrencyGame() {
@@ -8,8 +9,8 @@ function CurrencyGame() {
             id: "easy",
             title: "Asan",
             desc: "Yeni başlayanlar üçün uyğundur.",
-            icon: <GiBabyFace />, 
-            bgIcon: <GiLevelEndFlag />,      
+            icon: <GiBabyFace />,
+            bgIcon: <GiLevelEndFlag />,
             gradient: "from-emerald-400 to-teal-600",
             tag: "BAŞLANĞIC",
         },
@@ -18,7 +19,7 @@ function CurrencyGame() {
             title: "Orta",
             desc: "Təcrübəli oyunçular üçün.",
             icon: <GiTargetDummy />,
-            bgIcon: <GiTrophyCup />, 
+            bgIcon: <GiTrophyCup />,
             gradient: "from-yellow-500 to-pink-600",
             tag: "SINAQ",
         },
@@ -26,8 +27,8 @@ function CurrencyGame() {
             id: "hard",
             title: "Çətin",
             desc: "Dünya xəritəsi ekspertlərinə!",
-            icon: <GiAbstract013 />,       
-            bgIcon: <GiCrossedSwords />,  
+            icon: <GiAbstract013 />,
+            bgIcon: <GiCrossedSwords />,
             gradient: "from-green-600 to-lime-400",
             tag: "EKSPERT",
         }
@@ -84,6 +85,7 @@ function CurrencyGame() {
                             </div>
                         ))}
                     </div>
+                    <GameRul />
                 </div>
             </section>
         </>
