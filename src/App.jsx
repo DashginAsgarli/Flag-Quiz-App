@@ -50,8 +50,8 @@ function App() {
             <Route path="/games/currency" element={<CurrencyGame />} />
             <Route path="/games/flag" element={<FlagGame />} />
             <Route path='/games/flag/fplay' element={<FlagGamePlay/>}/>
-            <Route path='/games/flag/cplay' element={<CurrencyGamePlay/>}/>
-            <Route path='/games/flag/qplay' element={<ContinentGamePlay/>}/>
+            <Route path='/games/currency/cplay' element={<CurrencyGamePlay/>}/>
+            <Route path='/games/continent/qplay' element={<ContinentGamePlay/>}/>
           </Routes>
         </CountryProvider>
       </section>
