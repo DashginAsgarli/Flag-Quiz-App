@@ -15,7 +15,7 @@ function HomePage() {
     },
     {
       id: 2,
-      title: "Valyuta - Ölkə",
+      title: "Bayraq - Valyuta",
       mainIcon: <GiCash />,
       bgIcon: <GiGoldBar />,
       gradient: "from-emerald-400 to-teal-600",
@@ -33,7 +33,7 @@ function HomePage() {
     },
     {
       id: 4,
-      title: "Qitə - Ölkə",
+      title: "Bayraq - Qitə",
       mainIcon: <GiEarthAfricaEurope />,
       bgIcon: <GiCompass />,
       gradient: "from-green-600 to-lime-400",
