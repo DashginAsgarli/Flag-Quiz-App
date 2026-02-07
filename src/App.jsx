@@ -22,6 +22,7 @@ import FlagGame from './page-component/Games/FlagGame.jsx';
 import { CountryProvider } from './api/CountryContext.jsx';
 
 import FlagGamePlay from './page-component/Games/FlagGamePlay.jsx';
+import CurrencyGamePlay from './page-component/Games/CurrencyGamePlay.jsx';
 function App() {
   return (
     <>
@@ -48,6 +49,7 @@ function App() {
             <Route path="/games/currency" element={<CurrencyGame />} />
             <Route path="/games/flag" element={<FlagGame />} />
             <Route path='/games/flag/fplay' element={<FlagGamePlay/>}/>
+            <Route path='/games/flag/cplay' element={<CurrencyGamePlay/>}/>
           </Routes>
         </CountryProvider>
       </section>

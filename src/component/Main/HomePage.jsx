@@ -26,8 +26,8 @@ function HomePage() {
       id: 3,
       title: "Qlobal - Dünya",
       mainIcon: <GiWorld />,
+      gradient: "from-slate-800 to-slate-950",
       bgIcon: <GiGlobe />,
-      gradient: "from-green-600 to-lime-400",
       tag: "Premium",
       to: "/games/global"
     },
@@ -36,7 +36,7 @@ function HomePage() {
       title: "Qitə - Ölkə",
       mainIcon: <GiEarthAfricaEurope />,
       bgIcon: <GiCompass />,
-      gradient: "from-slate-800 to-slate-950",
+      gradient: "from-green-600 to-lime-400",
       tag: "Ekspert",
       to: "/games/continent"
     }
