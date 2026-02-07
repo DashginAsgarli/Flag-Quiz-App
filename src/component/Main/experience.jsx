@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaGlobeAmericas, FaList, FaIdCard } from "react-icons/fa";
 import { MdExplore, MdArrowForward } from "react-icons/md";
-
+import { HiLightningBolt } from "react-icons/hi";
 function Experience() {
   return (
     <>
@@ -108,6 +108,31 @@ function Experience() {
                 </div>
               </div>
             </NavLink>
+          </div>
+
+          <div className="relative group overflow-hidden rounded-[2rem] bg-slate-900 p-6 md:p-8 text-white shadow-xl mb-8 md:mb-12 border border-slate-800 mt-10">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
+              <FaGlobeAmericas size={180} />
+            </div>
+
+            <div className="relative z-10 flex flex-col gap-3">
+              <div className="flex items-center gap-2 bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full w-fit border border-yellow-400/30">
+                <HiLightningBolt className="animate-pulse text-xs md:text-sm" />
+                <span className="text-[10px] font-bold uppercase tracking-widest">Günün Seçimi</span>
+              </div>
+
+              <h3 className="text-2xl md:text-4xl font-black italic tracking-tight">
+                İtaliya
+              </h3>
+
+              <p className="text-slate-400  text-xs md:text-sm leading-relaxed font-medium">
+                İtaliya, Aralıq dənizinin mərkəzində yerləşən və özünəməxsus "çəkmə" forması ilə tanınan qədim bir Avropa dövlətidir.
+                Paytaxtı Roma olan bu ölkə, minilliklər boyu Qərb sivilizasiyasının formalaşmasında həlledici rol oynamış Roma İmperiyasının mərkəzi olmuşdur.
+                Dünya üzrə UNESCO-nun Ümumdünya İrsi siyahısında ən çox abidəyə sahib olan ölkə kimi mədəniyyət turizminin lideridir.
+                İtaliya həm də dahi sənətkarların — Leonardo da Vinçi, Mikelancelo və Dante kimi simaların vətəni sayılır.
+                Ölkənin şimalını möhtəşəm Alp dağları bəzədiyi halda, cənub hissəsi mənzərəli sahilləri və aktiv vulkanları ilə fərqlənir.
+              </p>
+            </div>
           </div>
         </div>
       </section>
