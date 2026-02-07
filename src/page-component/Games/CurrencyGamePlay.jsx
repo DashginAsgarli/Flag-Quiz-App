@@ -16,7 +16,7 @@ function CurrencyGamePlay() {
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
   const [lives, setLives] = useState(MAX_LIVES);
-  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeLeft, setTimeLeft] = useState(20);
   const [gameOver, setGameOver] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
@@ -90,7 +90,7 @@ function CurrencyGamePlay() {
 
   useEffect(() => {
     if (timeLeft > 0 && !gameOver && !selectedAnswer) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 2000);
       return () => clearTimeout(timer);
     }
     if (timeLeft === 0 && !selectedAnswer) {
