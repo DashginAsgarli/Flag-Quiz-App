@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Login() {
     return (
-        <section className="min-h-screen flex justify-center items-start pt-8 sm:pt-12 md:pt-16 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900 font-sans">
+        <section className="min-h-screen flex justify-center items-start pt-8 sm:pt-12 md:pt-16 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900 font-sans mt-13">
             <div className="w-full max-w-md">
                 <div className="p-6 sm:p-8 rounded-3xl border bg-white border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
                     <div className="flex flex-col items-center text-center mb-6">
