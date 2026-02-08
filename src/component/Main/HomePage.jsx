@@ -70,6 +70,31 @@ function HomePage() {
             </div>
           </div>
 
+
+          <div className="m-auto mb-8 flex items-center w-fit gap-2 md:gap-3 bg-slate-900/5 backdrop-blur-md px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/40 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.05)] transition-all hover:scale-105">
+            <div className="flex -space-x-2 md:-space-x-2.5">
+              {[1, 2, 7, 15].map((i) => (
+                <img
+                  key={i}
+                  className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white shadow-sm object-cover transition-transform hover:-translate-y-1"
+                  src={`https://i.pravatar.cc/100?img=${i + 10}`}
+                  alt="istifadəçi"
+                />
+              ))}
+            </div>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5">
+                <span className="relative flex h-1.5 w-1.5 md:h-2 md:w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 md:h-2 md:w-2 bg-emerald-500"></span>
+                </span>
+                <p className="text-[8px] md:text-[10px] font-medium text-slate-500 whitespace-nowrap">
+                  Hazırda <span className="text-emerald-500">milyonlarla insan</span> fəth edir
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6">
             {categories.map((cat) => (
               <div
