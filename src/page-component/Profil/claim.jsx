@@ -4,7 +4,7 @@ import { MdVerified } from "react-icons/md";
 function Claim() {
     return (
         <>
-            <section className="p-6 rounded-[2rem] border border-slate-200 bg-white shadow-sm overflow-hidden relative group">
+            <section className="p-6 rounded-[1.2rem] border border-slate-200 bg-white shadow-sm overflow-hidden relative group">
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-red-100 transition-transform group-hover:rotate-12">
