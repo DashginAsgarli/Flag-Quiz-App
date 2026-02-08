@@ -186,6 +186,41 @@ function Shop() {
             <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-red-600/10 rounded-full blur-[60px] md:blur-[80px]"></div>
           </div>
 
+          <div className="mt-6 relative group">
+            <div className="absolute -inset-0.5 bg-yellow-500/20 rounded-[1.2rem] blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative bg-[#0f172a] rounded-[1rem] p-0.5 border border-white/5 overflow-hidden transition-colors group-hover:border-yellow-500/20">
+              <div className="absolute top-0 -inset-full h-full w-1/3 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-20 group-hover:animate-[shimmer_2s_infinite]"></div>
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-3 md:p-4 gap-3 md:gap-6">
+                <div className="flex items-center gap-3 md:gap-4 text-left w-full md:w-auto">
+                  <div className="relative shrink-0">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-yellow-500/90 to-orange-600/90 rounded-lg flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                      <FaCoins className="text-white text-xl md:text-2xl" />
+                    </div>
+                    <MdStars className="absolute -top-1 -right-1 text-yellow-300/80 text-sm md:text-base" />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <h3 className="text-sm md:text-lg font-black text-white italic tracking-tight leading-none">
+                      GÜNDƏLİK <span className="text-yellow-500">HƏDİYYƏ</span>
+                    </h3>
+                    <p className="text-slate-500 text-[10px] md:text-xs mt-1 font-medium leading-none">
+                      Günün şansını yoxla və qazan!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="shrink-0 w-full md:w-auto">
+                  <button className="relative w-full md:w-auto overflow-hidden px-5 py-2 md:px-7 md:py-2.5 bg-yellow-500 rounded-lg transition-all duration-300 hover:brightness-110 active:scale-95 shadow-sm">
+                    <span className="relative z-10 flex items-center justify-center gap-2 text-slate-950 font-black text-[10px] md:text-xs uppercase tracking-tighter">
+                      <MdFlashOn size={14} /> İNDİ QAZAN
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 mt-16">
             {[
               {
