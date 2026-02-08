@@ -43,8 +43,32 @@ function HomePage() {
   ];
   return (
     <>
+
       <section className="min-h-screen py-4 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-15">
         <div className="max-w-7xl mx-auto">
+
+          <div className="mb-6 md:mb-12 flex flex-row items-center justify-between gap-3 md:gap-8">
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 italic tracking-tighter leading-tight">
+                SALAAM, <span className="text-red-600 uppercase">Səyyah!</span>
+              </h1>
+              <p className="text-slate-500 font-bold mt-0.5 md:mt-2 uppercase text-[9px] sm:text-xs md:text-sm tracking-[0.1em] md:tracking-widest truncate">
+                Bu gün hansı qitəni fəth edirik?
+              </p>
+            </div>
+
+            <div className="flex shrink-0 gap-1 md:gap-4">
+              <div className="bg-white p-2 sm:p-3 md:p-3 rounded-xl border border-slate-200 shadow-sm flex items-center gap-2 md:gap-4 transition-all">
+                <div className="w-7 h-7 sm:w-10 sm:h-10 md:w-14 md:h-14 bg-orange-100 text-orange-600 rounded-lg md:rounded-2xl flex items-center justify-center shrink-0">
+                  <GiGoldBar className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7" />
+                </div>
+                <div className="leading-tight">
+                  <p className="text-[7px] sm:text-[9px] md:text-xs font-black text-slate-400 uppercase">Sıralama</p>
+                  <p className="text-xs sm:text-sm md:text-xl lg:text-2xl font-black text-slate-800">#124</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6">
             {categories.map((cat) => (
