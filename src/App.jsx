@@ -24,6 +24,7 @@ import { CountryProvider } from './api/CountryContext.jsx';
 import FlagGamePlay from './page-component/Games/FlagGamePlay.jsx';
 import CurrencyGamePlay from './page-component/Games/CurrencyGamePlay.jsx';
 import ContinentGamePlay from './page-component/Games/ContinentGamePlay.jsx';
+import Footer from './component/Footer/footer.jsx';
 function App() {
   return (
     <>
@@ -55,7 +56,7 @@ function App() {
           </Routes>
         </CountryProvider>
       </section>
-
+    <Footer/>
     </>
   )
 }
