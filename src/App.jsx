@@ -24,7 +24,6 @@ import { CountryProvider } from './api/CountryContext.jsx';
 import FlagGamePlay from './page-component/Games/FlagGamePlay.jsx';
 import CurrencyGamePlay from './page-component/Games/CurrencyGamePlay.jsx';
 import ContinentGamePlay from './page-component/Games/ContinentGamePlay.jsx';
-import Footer from './component/Footer/footer.jsx';
 import GlobalGamePlay from './page-component/Games/GlobalGamePlay.jsx';
 function App() {
   return (
@@ -54,11 +53,10 @@ function App() {
             <Route path='/games/flag/fplay' element={<FlagGamePlay/>}/>
             <Route path='/games/currency/cplay' element={<CurrencyGamePlay/>}/>
             <Route path='/games/continent/qplay' element={<ContinentGamePlay/>}/>
-            <Route path='games/continent/memory' element={<GlobalGamePlay/>}/>
+            <Route path='games/global/memory' element={<GlobalGamePlay/>}/>
           </Routes>
         </CountryProvider>
       </section>
-    <Footer/>
     </>
   )
 }

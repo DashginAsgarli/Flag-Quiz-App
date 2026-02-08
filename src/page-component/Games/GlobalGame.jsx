@@ -75,7 +75,7 @@ function FlagGame() {
 
                                 <div className="relative z-20 flex items-center justify-end">
                                     <NavLink
-                                        to={`mempory`}
+                                        to={`memory`}
                                         className="flex items-center gap-1 md:gap-2 bg-white text-slate-900 px-4 py-2 md:px-8 md:py-3 rounded-lg md:rounded-xl font-bold text-[10px] md:text-sm transition-all shadow-lg hover:bg-slate-100 active:scale-95"
                                     >
                                         SEÇ <MdArrowForward className="text-xs md:text-lg" />
