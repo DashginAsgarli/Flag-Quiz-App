@@ -2,6 +2,7 @@ import React from 'react'
 import { FaUserCircle, FaSun, FaLanguage, FaShieldAlt, FaHistory, FaSignOutAlt, FaUserPlus, FaSignInAlt, FaFire, FaTrophy, FaCoins, FaChartLine, FaUserAstronaut, FaCrown } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdVerified, MdStars, MdExplore } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
+import Claim from '../../page-component/Profil/claim';
 function Profil() {
   return (
     <>
@@ -202,7 +203,7 @@ function Profil() {
 
             </div>
           </div>
-
+          <Claim />
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-0.5 rounded-[2rem] shadow-lg shadow-orange-200/40">
             <div className="bg-white rounded-[1.9rem] p-5 flex items-center justify-between">
               <div className="flex items-center gap-4">
