@@ -3,6 +3,7 @@ import { FaUserCircle, FaSun, FaLanguage, FaShieldAlt, FaHistory, FaSignOutAlt, 
 import { MdKeyboardArrowRight, MdVerified, MdStars, MdExplore } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 import Claim from '../../page-component/Profil/claim';
+import GameAnalyticsCard from '../../page-component/Profil/GameAnalyticsCard';
 function Profil() {
   return (
     <>
@@ -204,6 +205,7 @@ function Profil() {
             </div>
           </div>
           <Claim />
+          <GameAnalyticsCard />
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-0.5 rounded-[2rem] shadow-lg shadow-orange-200/40">
             <div className="bg-white rounded-[1.9rem] p-5 flex items-center justify-between">
               <div className="flex items-center gap-4">
