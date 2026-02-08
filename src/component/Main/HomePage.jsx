@@ -2,6 +2,7 @@ import React from 'react'
 import { GiFlyingFlag, GiWorld, GiCash, GiEarthAfricaEurope, GiGoldBar, GiGlobe, GiCompass } from "react-icons/gi";
 import { MdArrowForward } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
+import Footer from '../Footer/footer'
 function HomePage() {
   const categories = [
     {
@@ -24,7 +25,7 @@ function HomePage() {
     },
     {
       id: 3,
-      title: "Qlobal - Dünya",
+      title: "Bayraq - Yaddaş",
       mainIcon: <GiWorld />,
       gradient: "from-slate-800 to-slate-950",
       bgIcon: <GiGlobe />,
@@ -135,6 +136,8 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+    <Footer/>
     </>
   )
 }
