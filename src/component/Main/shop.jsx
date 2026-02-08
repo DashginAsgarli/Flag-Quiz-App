@@ -2,12 +2,7 @@ import { FaCoins, FaCrown, FaGem, FaUserAstronaut, FaCartPlus } from "react-icon
 import { MdExplore, MdArrowForward, MdVerified, MdStars } from "react-icons/md";
 import { MdVerifiedUser, MdFlashOn, MdSupportAgent } from "react-icons/md";
 import React from 'react';
-import {
-  FaCcVisa,
-  FaCcMastercard,
-  FaApplePay,
-  FaGooglePay
-} from 'react-icons/fa';
+import { FaCcVisa, FaCcMastercard, FaApplePay, FaGooglePay } from 'react-icons/fa';
 
 
 function Shop() {
