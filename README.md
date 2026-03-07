@@ -2,9 +2,8 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🌍%20Live%20Demo-Play%20Now-22c55e?style=for-the-badge)](https://gleaming-pudding-920aba.netlify.app/games/continent)
+[![Live Demo](https://img.shields.io/badge/🌍%20Live%20Demo-Play%20Now-22c55e?style=for-the-badge)](https://gleaming-pudding-920aba.netlify.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/DashginAsgarli/flag-quiz-app)
-[![License](https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge)](LICENSE)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://netlify.com)
 
@@ -18,15 +17,15 @@
 
 ---
 
-## ✨ Features
-
 > [!NOTE]
-> <p> User profile with level, experience & stats</p>
-> <p>Leaderboard — compete with other players</p>
-> <p>In-app store </p>
-> <p>4 different quiz game modes</p>
-> <p>Track your progress and rating</p>
-> <p>Fully responsive across all devices</p>
+> <ul>
+> <li> User profile with level, experience & stats</li>
+> <li>Leaderboard - compete with other players</li>
+> <li>In-app store</li>
+> <li>4 different quiz game modes</li>
+> <li>Track your progress and rating</li>
+> <li>Fully responsive across all devices</li>
+> </ul>
 
 ## 🎮 Game Modes
 
@@ -36,22 +35,11 @@
 > <p> 🌍 <b> Flag → Continent </b> - A flag is displayed; determine which continent the country belongs to.</p>
 > <p> 🧠 <b> Memory Game </b> - Flip the cards to find and match pairs of flags with their corresponding countries.</p>
 
----
 
 ## 📸 Screenshots
 
-> *Add your screenshots here*
+<img width="900" height="400" alt="image" src="https://github.com/user-attachments/assets/65b34d95-f6e0-41e6-8d4b-b76b9be8246a" />
 
----
-
-## 🔧 Prerequisites
-
-Before running this project, make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/) `v16+`
-- [npm](https://www.npmjs.com/) `v8+` or [yarn](https://yarnpkg.com/)
-
----
 
 ## 🚀 Getting Started
 
@@ -66,19 +54,17 @@ cd flag-quiz-app
 npm install
 
 # 4. Start the development server
-npm start
+npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 💡 Usage
+## 🔧 Prerequisites
 
-1. **Create a profile** — sign up to track your progress
-2. **Choose a game mode** — pick from 4 available quiz types
-3. **Answer questions** — earn XP and climb the leaderboard
-4. **Visit the store** — unlock new items with your points
+Before running this project, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) `v16+`
+- [npm](https://www.npmjs.com/) `v8+` or [yarn](https://yarnpkg.com/)
 
 ---
 
@@ -105,15 +91,9 @@ git push origin feature/your-feature-name
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 📬 Contact
 
-<div align="center">
+<div>
 
 [![Email](https://img.shields.io/badge/Gmail-dashqinasgarli%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dashqinasgarli@gmail.com)
 &nbsp;
@@ -123,11 +103,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 </div>
 
----
 
 <div align="center">
   Built with by <a href="https://github.com/DashginAsgarli">Dashgin Asgarli</a>
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=130&section=footer" width="100%"/>
-
