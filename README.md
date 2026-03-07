@@ -35,11 +35,7 @@
 > <p> 🌍 <b> Flag → Continent </b> - A flag is displayed; determine which continent the country belongs to.</p>
 > <p> 🧠 <b> Memory Game </b> - Flip the cards to find and match pairs of flags with their corresponding countries.</p>
 
-
-## 📸 Screenshots
-
-<img width="900" height="400" alt="image" src="https://github.com/user-attachments/assets/65b34d95-f6e0-41e6-8d4b-b76b9be8246a" />
-
+---
 
 ## 🚀 Getting Started
 
@@ -109,3 +105,4 @@ git push origin feature/your-feature-name
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=130&section=footer" width="100%"/>
+
