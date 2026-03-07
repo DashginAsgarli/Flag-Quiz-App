@@ -18,46 +18,23 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [Features](#-features)
-- [Game Modes](#-game-modes)
-- [Screenshots](#-screenshots)
-- [Prerequisites](#-prerequisites)
-- [Getting Started](#-getting-started)
-- [Usage](#-usage)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
-
----
-
 ## ✨ Features
 
-| | Feature |
-|---|---|
-| 👤 | User profile with level, experience & stats |
-| 🏆 | Leaderboard — compete with other players |
-| 🛒 | In-app store |
-| 🌍 | 4 different quiz game modes |
-| 📊 | Track your progress and rating |
-| 📱 | Fully responsive across all devices |
-
----
+> [!NOTE]
+> <p> User profile with level, experience & stats</p>
+> <p>Leaderboard — compete with other players</p>
+> <p>In-app store </p>
+> <p>4 different quiz game modes</p>
+> <p>Track your progress and rating</p>
+> <p>Fully responsive across all devices</p>
 
 ## 🎮 Game Modes
 
 > [!NOTE]
-> 🚩 **Flag → Country** — Guess the country from its flag
-
-> [!NOTE]
-> 🗺️ **Country → Flag** — Guess the flag from the country name
-
-> [!NOTE]
-> 💡 **Capital → Flag** — Guess the flag from the capital city
-
-> [!NOTE]
-> 🧠 **Memory Game** — Match flags with their countries
+> <p> 🚩 <b> Flag → Country </b> - A flag is displayed; choose the correct country from the options.</p>
+> <p> 💸 <b> Flag → Currency </b> - A flag is displayed; identify the official currency used by that country.</p>
+> <p> 🌍 <b> Flag → Continent </b> - A flag is displayed; determine which continent the country belongs to.</p>
+> <p> 🧠 <b> Memory Game </b> - Flip the cards to find and match pairs of flags with their corresponding countries.</p>
 
 ---
 
@@ -149,8 +126,8 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <div align="center">
-  <p>⭐ If you enjoy the game, give it a star — it means a lot!</p>
-  <sub>Built with ❤️ by <a href="https://github.com/DashginAsgarli">Dashgin Asgarli</a></sub>
+  Built with by <a href="https://github.com/DashginAsgarli">Dashgin Asgarli</a>
 </div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=130&section=footer" width="100%"/>
+
