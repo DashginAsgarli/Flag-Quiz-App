@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 **Flag Quiz App** is an interactive geography quiz game where players test their knowledge of world flags. With 4 different game modes and features like profiles, leaderboards, and experience points, it makes learning geography fun and engaging.
 
@@ -28,17 +28,17 @@
 > <li>Fully responsive across all devices</li>
 > </ul>
 
-## 🎮 Game Modes
+## Game Modes
 
 > [!NOTE]
-> <p> 🚩 <b> Flag → Country </b> - A flag is displayed; choose the correct country from the options.</p>
-> <p> 💸 <b> Flag → Currency </b> - A flag is displayed; identify the official currency used by that country.</p>
-> <p> 🌍 <b> Flag → Continent </b> - A flag is displayed; determine which continent the country belongs to.</p>
-> <p> 🧠 <b> Memory Game </b> - Flip the cards to find and match pairs of flags with their corresponding countries.</p>
+> <p> <b> Flag → Country </b> - A flag is displayed; choose the correct country from the options.</p>
+> <p> <b> Flag → Currency </b> - A flag is displayed; identify the official currency used by that country.</p>
+> <p> <b> Flag → Continent </b> - A flag is displayed; determine which continent the country belongs to.</p>
+> <p> <b> Memory Game </b> - Flip the cards to find and match pairs of flags with their corresponding countries.</p>
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 # 1. Clone the repository
@@ -56,7 +56,7 @@ npm run dev
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Before running this project, make sure you have the following installed:
 
@@ -65,7 +65,7 @@ Before running this project, make sure you have the following installed:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how to get started:
 
@@ -88,7 +88,7 @@ git push origin feature/your-feature-name
 
 ---
 
-## 📬 Contact
+## Contact
 
 <div>
 
@@ -100,10 +100,4 @@ git push origin feature/your-feature-name
 
 </div>
 
-
-<div align="center">
-  Built with by <a href="https://github.com/DashginAsgarli">Dashgin Asgarli</a>
-</div>
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=130&section=footer" width="100%"/>
-
