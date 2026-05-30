@@ -6,9 +6,7 @@ export function CountryProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      "https://restcountries.com/v3.1/all?fields=name,flags,capital,population,currencies,continents"
-    )
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags,capital,population,currencies,continents")
       .then(res => {
         if (!res.ok) throw new Error("API error");
         return res.json();

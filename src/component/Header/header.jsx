@@ -4,7 +4,7 @@ import { FaUserAstronaut, FaHome } from "react-icons/fa";
 import { MdModelTraining, MdLeaderboard, MdShoppingCart } from "react-icons/md";
 function Header() {
     return (
-        <header className="fixed top-0 left-0 w-full z-[1000] bg-[#0f172a] border-b border-slate-800 shadow-2xl">
+        <header className="fixed top-0 left-0 w-full z-1000 bg-[#0f172a] border-b border-slate-800 shadow-2xl">
             <nav className="max-w-7xl mx-auto px-1 py-2 md:px-10 md:py-4">
                 <div className="flex justify-between items-center gap-0.5 md:gap-4">
 
