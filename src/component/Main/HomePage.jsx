@@ -45,7 +45,7 @@ function HomePage() {
   return (
     <>
 
-      <section className="min-h-screen py-4 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-15">
+      <section className="min-h-screen py-4 md:py-12 px-4 md:px-6 bg-linear-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-15">
         <div className="max-w-7xl mx-auto">
 
           <div className="mb-6 md:mb-12 flex flex-row items-center justify-between gap-3 md:gap-8">
@@ -53,7 +53,7 @@ function HomePage() {
               <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-black text-slate-900 italic tracking-tighter leading-tight">
                 SALAAM, <span className="text-red-600 uppercase">Səyyah!</span>
               </h1>
-              <p className="text-slate-500 font-bold mt-0.5 md:mt-2 uppercase text-[9px] sm:text-xs md:text-sm tracking-[0.1em] md:tracking-widest truncate">
+              <p className="text-slate-500 font-bold mt-0.5 md:mt-2 uppercase text-[9px] sm:text-xs md:text-sm tracking-widest md:tracking-widest truncate">
                 Bu gün hansı qitəni fəth edirik?
               </p>
             </div>
@@ -100,7 +100,7 @@ function HomePage() {
             {categories.map((cat) => (
               <div
                 key={cat.id}
-                className={`group relative rounded-xl md:rounded-3xl p-4 md:p-8 h-28 sm:h-36 md:h-60 flex flex-col justify-between overflow-hidden bg-gradient-to-br ${cat.gradient} text-white transform transition-all duration-500 shadow-md hover:shadow-xl hover:scale-[1.01] cursor-pointer`}
+                className={`group relative rounded-xl md:rounded-3xl p-4 md:p-8 h-28 sm:h-36 md:h-60 flex flex-col justify-between overflow-hidden bg-linear-to-br ${cat.gradient} text-white transform transition-all duration-500 shadow-md hover:shadow-xl hover:scale-[1.01] cursor-pointer`}
               >
                 <div className="relative z-20">
                   <div className="flex items-center gap-2 md:gap-5">
@@ -130,7 +130,7 @@ function HomePage() {
                     <MdArrowForward className="text-[10px] md:text-lg" />
                   </span>
                 </NavLink>
-                <div className="absolute top-0 right-0 w-20 h-20 md:w-40 md:h-40 bg-white/10 rounded-full blur-[40px] md:blur-[80px]"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 md:w-40 md:h-40 bg-white/10 rounded-full blur-2xl md:blur-[80px]"></div>
               </div>
             ))}
           </div>

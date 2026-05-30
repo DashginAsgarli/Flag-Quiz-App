@@ -7,7 +7,7 @@ import GameAnalyticsCard from '../../page-component/Profil/GameAnalyticsCard';
 function Profil() {
   return (
     <>
-      <section className="min-h-screen py-8 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900 mt-10 md:mt-20">
+      <section className="min-h-screen py-8 px-4 bg-linear-to-br from-slate-50 via-white to-slate-100 text-slate-900 mt-10 md:mt-20">
         <div className="max-w-7xl mx-auto space-y-6">
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -138,7 +138,7 @@ function Profil() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="group relative rounded-2xl p-5 h-40 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white shadow-md hover:shadow-xl transition-all cursor-pointer">
+                <div className="group relative rounded-2xl p-5 h-40 flex flex-col justify-between overflow-hidden bg-linear-to-br from-yellow-500 to-pink-600 text-white shadow-md hover:shadow-xl transition-all cursor-pointer">
                   <div className="relative z-20 flex justify-between items-start">
                     <div className="p-2 bg-white/30 rounded-lg backdrop-blur-sm"><FaFire className="text-xl" /></div>
                     <span className="text-[10px] font-bold uppercase tracking-widest bg-white/30 px-2 py-1 rounded-md">Gündəlik</span>
@@ -150,7 +150,7 @@ function Profil() {
                   <FaFire className="absolute -bottom-4 -left-4 text-8xl opacity-10 group-hover:scale-110 transition-transform" />
                 </div>
 
-                <div className="group relative rounded-2xl p-5 h-40 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-md hover:shadow-xl transition-all cursor-pointer">
+                <div className="group relative rounded-2xl p-5 h-40 flex flex-col justify-between overflow-hidden bg-linear-to-br from-emerald-400 to-teal-600 text-white shadow-md hover:shadow-xl transition-all cursor-pointer">
                   <div className="relative z-20 flex justify-between items-start">
                     <div className="p-2 bg-white/30 rounded-lg backdrop-blur-sm"><FaCoins className="text-xl text-yellow-300" /></div>
                     <span className="text-[10px] font-bold uppercase tracking-widest bg-white/30 px-2 py-1 rounded-md">Mövcud</span>
@@ -163,7 +163,7 @@ function Profil() {
                 </div>
               </div>
 
-              <div className="group relative rounded-[1.5rem] p-6 md:p-8 overflow-hidden bg-gradient-to-br from-green-600 to-lime-400 text-white shadow-2xl transition-all">
+              <div className="group relative rounded-3xl p-6 md:p-8 overflow-hidden bg-linear-to-br from-green-600 to-lime-400 text-white shadow-2xl transition-all">
                 <div className="relative z-20 flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="text-center md:text-left space-y-2">
                     <h2 className="text-2xl md:text-3xl font-black  ">
@@ -206,7 +206,7 @@ function Profil() {
           </div>
           <Claim />
           <GameAnalyticsCard />
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-0.5 rounded-[2rem] shadow-lg shadow-orange-200/40">
+          <div className="bg-linear-to-r from-yellow-400 to-orange-500 p-0.5 rounded-4xl shadow-lg shadow-orange-200/40">
             <div className="bg-white rounded-[1.9rem] p-5 flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-yellow-100 rounded-2xl flex items-center justify-center">

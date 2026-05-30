@@ -6,11 +6,11 @@ import { HiLightningBolt } from "react-icons/hi";
 function Experience() {
   return (
     <>
-      <section className="min-h-screen py-6 md:py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
+      <section className="min-h-screen py-6 md:py-12 px-4 md:px-6 bg-linear-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
         <div className="max-w-7xl mx-auto">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            <NavLink to="/experience/globe" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-yellow-500 to-pink-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+            <NavLink to="/experience/globe" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-linear-to-br from-yellow-500 to-pink-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
               <div className="relative z-20">
                 <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
                   <div className="flex items-center gap-1.5 sm:gap-2">
@@ -43,7 +43,7 @@ function Experience() {
               </div>
             </NavLink>
 
-            <NavLink to="/experience/list" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-emerald-400 to-teal-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+            <NavLink to="/experience/list" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-linear-to-br from-emerald-400 to-teal-600 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
               <div className="relative z-20">
                 <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
                   <div className="flex items-center gap-1.5 sm:gap-2">
@@ -76,7 +76,7 @@ function Experience() {
               </div>
             </NavLink>
 
-            <NavLink to="/experience/cardsinfo" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-gradient-to-br from-green-600 to-lime-400 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
+            <NavLink to="/experience/cardsinfo" className="group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-linear-to-br from-green-600 to-lime-400 text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer">
               <div className="relative z-20">
                 <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
                   <div className="flex items-center gap-1.5 sm:gap-2">
@@ -110,7 +110,7 @@ function Experience() {
             </NavLink>
           </div>
 
-          <div className="relative group overflow-hidden rounded-[2rem] bg-slate-900 p-6 md:p-8 text-white shadow-xl mb-8 md:mb-12 border border-slate-800 mt-10">
+          <div className="relative group overflow-hidden rounded-4xl bg-slate-900 p-6 md:p-8 text-white shadow-xl mb-8 md:mb-12 border border-slate-800 mt-10">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
               <FaGlobeAmericas size={180} />
             </div>

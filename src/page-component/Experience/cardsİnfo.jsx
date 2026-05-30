@@ -27,12 +27,12 @@ function Cardsİnfo() {
   };
   return (
     <>
-      <section className="min-h-screen py-6 md:py-10 px-3 md:px-6 bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-20">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="min-h-screen py-6 md:py-10 px-3 md:px-6 bg-linear-to-br from-slate-50 via-white to-slate-100 font-sans mt-13 md:mt-20">
+        <div className="max-w-350 mx-auto">
 
           <div className="flex flex-col items-center mb-6 md:mb-12 gap-4 md:gap-6">
 
-            <div className="relative w-full max-w-[280px] md:max-w-md group">
+            <div className="relative w-full max-w-70 md:max-w-md group">
               <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-red-500 transition-colors text-sm md:text-lg" />
               <input
                 type="text"
@@ -47,19 +47,19 @@ function Cardsİnfo() {
             {filteredCountries.map((country, index) => (
               <div
                 key={country.cca3 || index}
-                className="h-[140px] md:h-[210px] [perspective:1000px] cursor-pointer"
+                className="h-35 md:h-52.5 perspective-[1000px] cursor-pointer"
                 onClick={() => handleCardClick(index)}
               >
-                <div className={`relative h-full w-full rounded-xl md:rounded-2xl transition-all duration-700 [transform-style:preserve-3d] ${flippedCard === index ? '[transform:rotateY(180deg)]' : ''}`}>
+                <div className={`relative h-full w-full rounded-xl md:rounded-2xl transition-all duration-700 transform-3d ${flippedCard === index ? 'transform-[rotateY(180deg)]' : ''}`}>
 
-                  <div className="absolute inset-0 h-full w-full rounded-xl md:rounded-2xl [backface-visibility:hidden] overflow-hidden border-[3px] md:border-[6px] border-white shadow-sm">
+                  <div className="absolute inset-0 h-full w-full rounded-xl md:rounded-2xl backface-hidden overflow-hidden border-[3px] md:border-[6px] border-white shadow-sm">
                     <img src={country.flags.svg} alt="Flag" className="h-full w-full object-cover"/>
                   </div>
 
-                  <div className="absolute inset-0 h-full w-full rounded-xl md:rounded-2xl bg-slate-900 p-2 md:p-5 text-white [backface-visibility:hidden] [transform:rotateY(180deg)] border border-slate-800 flex flex-col justify-between overflow-hidden">
+                  <div className="absolute inset-0 h-full w-full rounded-xl md:rounded-2xl bg-slate-900 p-2 md:p-5 text-white backface-hidden transform-[rotateY(180deg)] border border-slate-800 flex flex-col justify-between overflow-hidden">
 
                     <div className="border-b border-white/10 pb-1 md:pb-2">
-                      <h3 className="text-[9px] md:text-[13px] font-black uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 truncate">
+                      <h3 className="text-[9px] md:text-[13px] font-black uppercase italic text-transparent bg-clip-text bg-linear-to-r from-yellow-400 to-orange-500 truncate">
                         {country.name.common}
                       </h3>
                     </div>

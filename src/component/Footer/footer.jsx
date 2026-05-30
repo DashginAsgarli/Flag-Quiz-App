@@ -16,7 +16,7 @@ function Footer() {
                         <div className="relative group">
                             <div className="absolute -inset-2 bg-red-600/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                             <div className="relative p-3 md:p-4 bg-slate-900 border border-slate-800 rounded-2xl md:rounded-3xl shadow-2xl transition-transform group-hover:-rotate-12">
-                                <GiGlobe size={24} className="text-red-500 md:w-[30px] md:h-[30px]" />
+                                <GiGlobe size={24} className="text-red-500 md:w-7.5 md:h-7.5" />
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ function Footer() {
                                 </a>
                             ))}
 
-                            <div className="w-[1px] h-6 bg-slate-800 mx-1 hidden md:block"></div>
+                            <div className="w-px h-6 bg-slate-800 mx-1 hidden md:block"></div>
 
                             <button onClick={scrollToTop} className="hidden md:flex w-10 h-10 items-center justify-center bg-red-600/10 border border-red-600/20 rounded-xl text-red-500 hover:bg-red-600 hover:text-white transition-all group" >
                                 <FaChevronUp size={14} className="group-hover:-translate-y-1 transition-transform" />

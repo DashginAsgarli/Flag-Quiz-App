@@ -8,7 +8,6 @@ import Shop from './component/Main/shop.jsx';
 import Experience from './component/Main/experience.jsx';
 import Rating from './component/Main/rating.jsx';
 import List from './page-component/Experience/list.jsx';
-import Globe from './page-component/Experience/globe.jsx';
 import Cardsİnfo from './page-component/Experience/cardsİnfo.jsx';
 
 import Login from './page-component/Login/login.jsx';
@@ -42,7 +41,6 @@ function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/rating" element={<Rating />} />
             <Route path="/experience/list" element={<List />} />
-            <Route path="/experience/globe" element={<Globe />} />
             <Route path="/experience/cardsinfo" element={<Cardsİnfo />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
