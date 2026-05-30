@@ -34,26 +34,17 @@ function Cardsİnfo() {
 
             <div className="relative w-full max-w-70 md:max-w-md group">
               <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-red-500 transition-colors text-sm md:text-lg" />
-              <input
-                type="text"
-                placeholder="Ölkə axtar..."
-                className="w-full pl-10 pr-4 py-2.5 md:py-3.5 bg-white border border-slate-200 rounded-xl md:rounded-2xl shadow-sm outline-none focus:ring-4 focus:ring-red-500/10 focus:border-red-500 transition-all text-sm md:text-base font-medium"
-                onChange={(e) => setSearch(e.target.value)}
-              />
+              <input type="text" placeholder="Ölkə axtar..." className="w-full pl-10 pr-4 py-2.5 md:py-3.5 bg-white border border-slate-200 rounded-xl md:rounded-2xl shadow-sm outline-none focus:ring-4 focus:ring-red-500/10 focus:border-red-500 transition-all text-sm md:text-base font-medium" onChange={(e) => setSearch(e.target.value)} />
             </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
             {filteredCountries.map((country, index) => (
-              <div
-                key={country.cca3 || index}
-                className="h-35 md:h-52.5 perspective-[1000px] cursor-pointer"
-                onClick={() => handleCardClick(index)}
-              >
+              <div key={country.cca3 || index} className="h-35 md:h-52.5 perspective-[1000px] cursor-pointer" onClick={() => handleCardClick(index)}>
                 <div className={`relative h-full w-full rounded-xl md:rounded-2xl transition-all duration-700 transform-3d ${flippedCard === index ? 'transform-[rotateY(180deg)]' : ''}`}>
 
                   <div className="absolute inset-0 h-full w-full rounded-xl md:rounded-2xl backface-hidden overflow-hidden border-[3px] md:border-[6px] border-white shadow-sm">
-                    <img src={country.flags.svg} alt="Flag" className="h-full w-full object-cover"/>
+                    <img src={country.flags.svg} alt="Flag" className="h-full w-full object-cover" />
                   </div>
 
                   <div className="absolute inset-0 h-full w-full rounded-xl md:rounded-2xl bg-slate-900 p-2 md:p-5 text-white backface-hidden transform-[rotateY(180deg)] border border-slate-800 flex flex-col justify-between overflow-hidden">

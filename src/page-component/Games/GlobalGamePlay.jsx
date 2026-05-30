@@ -151,7 +151,7 @@ function GlobalGamePlay() {
                             })}
                         </div>
                     ) : (
-                        <div className="text-center bg-white p-12 rounded-[2rem] shadow-2xl border border-slate-100 animate-in zoom-in duration-500 max-w-md mx-auto">
+                        <div className="text-center bg-white p-12 rounded-4xl shadow-2xl border border-slate-100 animate-in zoom-in duration-500 max-w-md mx-auto">
                             <div className="relative inline-block mb-6">
                                 <Trophy size={80} className="text-yellow-500 animate-bounce" />
                                 <div className="absolute -inset-1 bg-yellow-400/20 blur-xl rounded-full"></div>

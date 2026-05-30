@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .active {
-  color: #fcfcfc; 
+  color: #fcfcfc;
 }
 
 ::-webkit-scrollbar {

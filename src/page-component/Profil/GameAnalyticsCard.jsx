@@ -33,11 +33,8 @@ function GameAnalyticsCard() {
                 <span className="text-sm font-black text-slate-900 italic">{stat.value}%</span>
               </div>
 
-              <div className="relative h-3 w-full bg-slate-100 rounded-full p-[2px] border border-slate-50 shadow-inner">
-                <div
-                  className={`h-full rounded-full bg-gradient-to-r ${stat.color} shadow-sm transition-all duration-1000 group-hover:brightness-110`}
-                  style={{ width: `${stat.value}%` }}
-                >
+              <div className="relative h-3 w-full bg-slate-100 rounded-full p-0.5 border border-slate-50 shadow-inner">
+                <div className={`h-full rounded-full bg-linear-to-r ${stat.color} shadow-sm transition-all duration-1000 group-hover:brightness-110`} style={{ width: `${stat.value}%` }}>
                 </div>
               </div>
             </div>

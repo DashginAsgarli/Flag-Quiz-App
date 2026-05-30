@@ -121,7 +121,7 @@ function CurrencyGamePlay() {
   }
   return (
     <>
-      <section className="min-h-screen py-4 px-3 sm:px-6 bg-gradient-to-br from-slate-50 to-blue-50 mt-14 md:mt-23">
+      <section className="min-h-screen py-4 px-3 sm:px-6 bg-linear-to-br from-slate-50 to-blue-50 mt-14 md:mt-23">
         <div className="max-w-6xl mx-auto">
 
           {!gameOver ? (
@@ -161,7 +161,7 @@ function CurrencyGamePlay() {
                   <div className="mt-6">
                     <div className="text-xs text-slate-400 font-medium mb-2">Tərəqqi</div>
                     <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner">
-                      <div className="h-full bg-gradient-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
+                      <div className="h-full bg-linear-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
                     </div>
                   </div>
 
@@ -207,13 +207,13 @@ function CurrencyGamePlay() {
                   </div>
 
                   <div className="mt-3 h-2 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner">
-                    <div className="h-full bg-gradient-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
+                    <div className="h-full bg-linear-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <div className="md:h-72 bg-white rounded-2xl shadow-lg border border-slate-200 p-3 sm:p-4 flex flex-col items-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    <div className="w-full aspect-[2/1] sm:aspect-video bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center p-4 shadow-inner">
+                    <div className="w-full aspect-2/1 sm:aspect-video bg-linear-to-br from-slate-50 to-blue-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center p-4 shadow-inner">
                       <img src={question?.flags?.svg} alt="Country flag" className="max-h-full max-w-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
                     </div>
                     <p className="text-center text-slate-500 text-[11px] sm:text-sm font-medium mt-3 uppercase tracking-wider">
@@ -273,21 +273,21 @@ function CurrencyGamePlay() {
               </div>
             </div>
           ) : (
-            <div ref={gameResultRef} className="max-w-md mx-auto bg-gradient-to-br from-white to-slate-50 rounded-3xl shadow-2xl border border-slate-200 p-6 md:p-8 text-center hover:shadow-3xl transition-shadow duration-500">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+            <div ref={gameResultRef} className="max-w-md mx-auto bg-linear-to-br from-white to-slate-50 rounded-3xl shadow-2xl border border-slate-200 p-6 md:p-8 text-center hover:shadow-3xl transition-shadow duration-500">
+              <div className="w-12 h-12 bg-linear-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Trophy size={28} className="text-gradient-to-r from-blue-500 to-indigo-600" />
               </div>
-              <h2 className="text-2xl font-black text-slate-800 mb-1 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">Oyun Bitdi!</h2>
+              <h2 className="text-2xl font-black mb-1 bg-linear-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">Oyun Bitdi!</h2>
               <p className="text-slate-400 text-sm mb-6 font-medium">Nəticələriniz aşağıdakı kimidir</p>
 
               <div className="grid grid-cols-2 gap-3 mb-8">
-                <div className="bg-gradient-to-br from-slate-50 to-white rounded-xl p-3 border border-slate-100 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-linear-to-br from-slate-50 to-white rounded-xl p-3 border border-slate-100 shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="text-[10px] text-slate-400 font-bold uppercase mb-1">Ümumi Xal</div>
                   <div className="flex items-center justify-center gap-1 text-xl font-black text-slate-800">
                     <Coins className="text-gradient-to-r from-amber-500 to-yellow-500" size={18} /> {score}
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-slate-50 to-white rounded-xl p-3 border border-slate-100 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-linear-to-br from-slate-50 to-white rounded-xl p-3 border border-slate-100 shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="text-[10px] text-slate-400 font-bold uppercase mb-1">Düzgün</div>
                   <div className="text-xl font-black text-slate-800">
                     {Math.floor(score / 50)} / {TOTAL_QUESTIONS}
@@ -296,12 +296,12 @@ function CurrencyGamePlay() {
               </div>
 
               <div className="flex items-center gap-3 w-full">
-                <button onClick={restartGame} className="flex-1 h-[52px] bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg shadow-slate-300 hover:shadow-xl hover:-translate-y-1 active:translate-y-0">
+                <button onClick={restartGame} className="flex-1 h-13 bg-linear-to-r from-slate-900 to-slate-800 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:from-slate-800 hover:to-slate-700 transition-all duration-300 shadow-lg shadow-slate-300 hover:shadow-xl hover:-translate-y-1 active:translate-y-0">
                   <RotateCcw size={18} />
                   <span className="text-xs sm:text-sm whitespace-nowrap">Yenidən Başla</span>
                 </button>
 
-                <NavLink to="/games/currency" className="flex-1 h-[52px] bg-gradient-to-r from-slate-900 to-slate-800 text-white hover:from-slate-800 hover:to-slate-700 rounded-2xl flex items-center justify-center gap-2 transition-all duration-300 group shadow-lg shadow-slate-300 hover:shadow-xl hover:-translate-y-1 active:translate-y-0">
+                <NavLink to="/games/currency" className="flex-1 h-13 bg-linear-to-r from-slate-900 to-slate-800 text-white hover:from-slate-800 hover:to-slate-700 rounded-2xl flex items-center justify-center gap-2 transition-all duration-300 group shadow-lg shadow-slate-300 hover:shadow-xl hover:-translate-y-1 active:translate-y-0">
                   <MdKeyboardBackspace size={20} className="group-hover:-translate-x-1 transition-transform" />
                   <span className="font-bold text-xs uppercase tracking-wider whitespace-nowrap">Oyundan çıx</span>
                 </NavLink>

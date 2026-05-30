@@ -45,10 +45,10 @@ const HowToPlay = () => {
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                     {steps.map((step, index) => (
-                        <div key={index} className={`group relative overflow-hidden rounded-2xl md:rounded-[1.6rem] p-4 md:p-7 h-32 md:h-48 flex flex-col justify-between bg-gradient-to-br ${step.gradient} text-white shadow-lg transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/10`}>
+                        <div key={index} className={`group relative overflow-hidden rounded-2xl md:rounded-[1.6rem] p-4 md:p-7 h-32 md:h-48 flex flex-col justify-between bg-linear-to-br ${step.gradient} text-white shadow-lg transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/10`}>
                             
                             <div className="relative z-20 flex justify-between items-start">
-                                <div className="p-2 md:p-3 bg-white/20 backdrop-blur-md rounded-lg md:rounded-2xl shadow-inner group-hover:rotate-[10deg] transition-transform duration-500">
+                                <div className="p-2 md:p-3 bg-white/20 backdrop-blur-md rounded-lg md:rounded-2xl shadow-inner group-hover:rotate-10 transition-transform duration-500">
                                     <span className="text-xl md:text-3xl">{step.icon}</span>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ const HowToPlay = () => {
                                 {step.bgIcon}
                             </div>
 
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-[40px] md:blur-[60px]"></div>
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl md:blur-[60px]"></div>
                         </div>
                     ))}
                 </div>

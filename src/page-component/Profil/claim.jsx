@@ -7,7 +7,7 @@ function Claim() {
             <section className="p-6 rounded-[1.2rem] border border-slate-200 bg-white shadow-sm overflow-hidden relative group">
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-red-100 transition-transform group-hover:rotate-12">
+                        <div className="w-10 h-10 bg-linear-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-red-100 transition-transform group-hover:rotate-12">
                             <FaFire className="text-white text-lg" />
                         </div>
                         <div>
@@ -50,7 +50,7 @@ function Claim() {
                             </div>
 
                             {!m.done && (
-                                <div className="absolute bottom-0 left-4 right-4 h-[2px] bg-slate-100 rounded-full overflow-hidden">
+                                <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-slate-100 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-orange-500 transition-all duration-1000"
                                         style={{ width: `${m.progress}%` }}

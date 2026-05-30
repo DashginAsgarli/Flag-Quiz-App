@@ -40,7 +40,7 @@ function List() {
 
             <div className="relative w-full md:w-96">
               <IoSearchOutline className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl" />
-              <input type="text" placeholder="Ölkə və ya paytaxt..." className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600/20 outline-none text-slate-700 font-medium shadow-inner transition-all" onChange={(e) => setSearch(e.target.value)}/>
+              <input type="text" placeholder="Ölkə və ya paytaxt..." className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-red-600/20 outline-none text-slate-700 font-medium shadow-inner transition-all" onChange={(e) => setSearch(e.target.value)} />
             </div>
           </div>
 
@@ -60,7 +60,7 @@ function List() {
 
                   <div className="col-span-4 flex items-center gap-4 mb-3 md:mb-0">
                     <div className="overflow-hidden rounded-lg shadow-sm border border-slate-200 w-14 h-9 shrink-0 bg-white">
-                      <img src={country.flags.svg} alt="Flag" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-125"/>
+                      <img src={country.flags.svg} alt="Flag" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-125" />
                     </div>
                     <div className="truncate">
                       <h4 className="font-bold text-slate-800 text-[16px] leading-tight tracking-tight truncate group-hover:text-black">

@@ -91,7 +91,7 @@ function ContinentGamePlay() {
 
   return (
     <>
-      <section className="min-h-screen py-4 px-3 sm:px-6 bg-gradient-to-br from-slate-50 to-blue-50 mt-14 md:mt-23">
+      <section className="min-h-screen py-4 px-3 sm:px-6 bg-linear-to-br from-slate-50 to-blue-50 mt-14 md:mt-23">
         <div className="max-w-6xl mx-auto">
           {!gameOver ? (
             <div className="lg:flex lg:gap-6">
@@ -124,7 +124,7 @@ function ContinentGamePlay() {
                   <div className="mt-6">
                     <div className="text-xs text-slate-400 font-medium mb-2">Tərəqqi</div>
                     <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner">
-                      <div className="h-full bg-gradient-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
+                      <div className="h-full bg-linear-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
                     </div>
                   </div>
 
@@ -162,13 +162,13 @@ function ContinentGamePlay() {
                     </div>
                   </div>
                   <div className="mt-3 h-2 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner">
-                    <div className="h-full bg-gradient-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
+                    <div className="h-full bg-linear-to-r from-blue-500 to-slate-950 transition-all duration-700 ease-out shadow-md" style={{ width: `${((currentIdx + 1) / TOTAL_QUESTIONS) * 100}%` }}></div>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <div className="md:h-72 bg-white rounded-2xl shadow-lg border border-slate-200 p-3 sm:p-4 flex flex-col items-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                    <div className="w-full aspect-[2/1] sm:aspect-video bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center p-4 shadow-inner">
+                    <div className="w-full aspect-2/1 sm:aspect-video bg-linear-to-br from-slate-50 to-blue-50 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center p-4 shadow-inner">
                       <img src={question?.flags?.svg} alt="Flag" className="max-h-full max-w-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
                     </div>
                     <p className="text-center text-slate-500 text-[11px] sm:text-sm font-medium mt-3 uppercase tracking-wider">
@@ -213,8 +213,8 @@ function ContinentGamePlay() {
               </div>
             </div>
           ) : (
-            <div ref={gameResultRef} className="max-w-md mx-auto bg-gradient-to-br from-white to-slate-50 rounded-3xl shadow-2xl border border-slate-200 p-6 md:p-8 text-center hover:shadow-3xl transition-shadow duration-500">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+            <div ref={gameResultRef} className="max-w-md mx-auto bg-linear-to-br from-white to-slate-50 rounded-3xl shadow-2xl border border-slate-200 p-6 md:p-8 text-center hover:shadow-3xl transition-shadow duration-500">
+              <div className="w-12 h-12 bg-linear-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Trophy size={28} className="text-blue-600" />
               </div>
               <h2 className="text-2xl font-black text-slate-800 mb-1">Oyun Bitdi!</h2>
@@ -231,10 +231,10 @@ function ContinentGamePlay() {
                 </div>
               </div>
               <div className="flex items-center gap-3 w-full">
-                <button onClick={restartGame} className="flex-1 h-[52px] bg-slate-900 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg">
+                <button onClick={restartGame} className="flex-1 h-13 bg-slate-900 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all shadow-lg">
                   <RotateCcw size={18} /><span>Yenidən Başla</span>
                 </button>
-                <NavLink to="/games/continent" className="flex-1 h-[52px] bg-slate-900 text-white rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg">
+                <NavLink to="/games/continent" className="flex-1 h-13 bg-slate-900 text-white rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg">
                   <MdKeyboardBackspace size={20} /> <span className="font-bold text-xs uppercase">Oyundan çıx</span>
                 </NavLink>
               </div>
