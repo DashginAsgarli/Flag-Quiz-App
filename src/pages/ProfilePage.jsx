@@ -42,123 +42,139 @@ function ProfilePage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                     <div className="lg:col-span-5 space-y-6">
-
-                        <div className="p-6 rounded-3xl border shadow-sm flex flex-col items-center justify-between gap-4 bg-white border-slate-200">
-                            {isGuest ? (
-                                <>
-                                    <div className="flex items-center gap-4 w-full">
-                                        <div className="p-3 bg-red-100 text-red-600 rounded-2xl">
-                                            <FaUserAstronaut size={40} />
+                        <div className="rounded-3xl border shadow-sm bg-white border-slate-200 overflow-hidden">
+                            <div className="p-6 flex flex-col items-center justify-between gap-4">
+                                {isGuest ? (
+                                    <>
+                                        <div className="flex items-center gap-4 w-full">
+                                            <div className="p-3 bg-red-100 text-red-600 rounded-2xl">
+                                                <FaUserAstronaut size={40} />
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold text-lg text-slate-900">{t("auth.welcomeBack")}</h3>
+                                                <p className="text-sm text-slate-500">{t("auth.guestCta")}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h3 className="font-bold text-lg text-slate-900">{t("auth.welcomeBack")}</h3>
-                                            <p className="text-sm text-slate-500">{t("auth.guestCta")}</p>
+                                        <div className="flex gap-2 w-full">
+                                            <NavLink to="/login" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm">
+                                                <FaSignInAlt /> {t("auth.login")}
+                                            </NavLink>
+                                            <NavLink to="/register" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl font-semibold hover:bg-slate-200 transition-all text-sm">
+                                                <FaUserPlus /> {t("auth.register")}
+                                            </NavLink>
                                         </div>
-                                    </div>
-                                    <div className="flex gap-2 w-full">
-                                        <NavLink to="/login" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700 transition-all text-sm">
-                                            <FaSignInAlt /> {t("auth.login")}
-                                        </NavLink>
-                                        <NavLink to="/register" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl font-semibold hover:bg-slate-200 transition-all text-sm">
-                                            <FaUserPlus /> {t("auth.register")}
-                                        </NavLink>
-                                    </div>
-                                </>
-                            ) : (
-                                <div className="w-full">
-                                    <div className="flex items-start gap-4 mb-4">
-                                        <AvatarUpload />
-                                        <div className="flex-1 min-w-0">
-                                            {editMode ? (
-                                                <div className="space-y-2">
-                                                    <input value={editName} onChange={e => setEditName(e.target.value)} placeholder={t("auth.name")} className="w-full text-sm px-3 py-2 rounded-xl border border-slate-200 focus:border-red-500 outline-none bg-slate-50" />
-                                                    <input value={editNick} onChange={e => setEditNick(e.target.value)} placeholder={t("profile.nickname")} className="w-full text-sm px-3 py-2 rounded-xl border border-slate-200 focus:border-red-500 outline-none bg-slate-50" />
-                                                    <div className="flex gap-2">
-                                                        <button onClick={handleSaveEdit} className="flex items-center gap-1 px-3 py-1.5 bg-emerald-500 text-white rounded-lg text-xs font-bold hover:bg-emerald-600 transition-colors">
-                                                            <FaCheck size={10} /> {t("profile.save")}
-                                                        </button>
-                                                        <button onClick={() => setEditMode(false)} className="flex items-center gap-1 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-xs font-bold hover:bg-slate-200 transition-colors">
-                                                            <FaTimes size={10} /> {t("profile.cancel")}
-                                                        </button>
+                                    </>
+                                ) : (
+                                    <div className="w-full">
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <AvatarUpload />
+                                            <div className="flex-1 min-w-0">
+                                                {editMode ? (
+                                                    <div className="space-y-2">
+                                                        <input value={editName} onChange={e => setEditName(e.target.value)} placeholder={t("auth.name")} className="w-full text-sm px-3 py-2 rounded-xl border border-slate-200 focus:border-red-500 outline-none bg-slate-50" />
+                                                        <input value={editNick} onChange={e => setEditNick(e.target.value)} placeholder={t("profile.nickname")} className="w-full text-sm px-3 py-2 rounded-xl border border-slate-200 focus:border-red-500 outline-none bg-slate-50" />
+                                                        <div className="flex gap-2">
+                                                            <button onClick={handleSaveEdit} className="flex items-center gap-1 px-3 py-1.5 bg-emerald-500 text-white rounded-lg text-xs font-bold hover:bg-emerald-600 transition-colors">
+                                                                <FaCheck size={10} /> {t("profile.save")}
+                                                            </button>
+                                                            <button onClick={() => setEditMode(false)} className="flex items-center gap-1 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-xs font-bold hover:bg-slate-200 transition-colors">
+                                                                <FaTimes size={10} /> {t("profile.cancel")}
+                                                            </button>
+                                                        </div>
                                                     </div>
+                                                ) : (
+                                                    <>
+                                                        <div className="flex items-center gap-2">
+                                                            <h3 className="font-bold text-base text-slate-900 truncate">{user?.name}</h3>
+                                                            <button onClick={() => { setEditName(user?.name ?? ""); setEditNick(user?.nickname ?? ""); setEditMode(true); }} className="text-slate-400 hover:text-slate-600 transition-colors">
+                                                                <FaEdit size={12} />
+                                                            </button>
+                                                        </div>
+                                                        <p className="text-xs text-slate-500">@{user?.nickname}</p>
+                                                        <p className="text-[10px] text-slate-400 mt-1">{user?.email}</p>
+                                                    </>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-2">
+                                            <div className="flex-1 flex items-center gap-2 bg-amber-50 rounded-xl p-2.5 border border-amber-100">
+                                                <FaCoins className="text-amber-500" size={16} />
+                                                <div>
+                                                    <p className="text-[9px] text-amber-600 font-bold uppercase">Coin</p>
+                                                    <p className="text-sm font-black text-amber-700">{(user?.coin ?? 0).toLocaleString()}</p>
                                                 </div>
-                                            ) : (
-                                                <>
-                                                    <div className="flex items-center gap-2">
-                                                        <h3 className="font-bold text-base text-slate-900 truncate">{user?.name}</h3>
-                                                        <button onClick={() => { setEditName(user?.name ?? ""); setEditNick(user?.nickname ?? ""); setEditMode(true); }} className="text-slate-400 hover:text-slate-600 transition-colors">
-                                                            <FaEdit size={12} />
-                                                        </button>
-                                                    </div>
-                                                    <p className="text-xs text-slate-500">@{user?.nickname}</p>
-                                                    <p className="text-[10px] text-slate-400 mt-1">{user?.email}</p>
-                                                </>
-                                            )}
+                                            </div>
+                                            <div className="flex-1 flex items-center gap-2 bg-purple-50 rounded-xl p-2.5 border border-purple-100">
+                                                <FaTrophy className="text-purple-500" size={16} />
+                                                <div>
+                                                    <p className="text-[9px] text-purple-600 font-bold uppercase">XP</p>
+                                                    <p className="text-sm font-black text-purple-700">{(user?.xp ?? 0).toLocaleString()}</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="flex gap-2">
-                                        <div className="flex-1 flex items-center gap-2 bg-amber-50 rounded-xl p-2.5 border border-amber-100">
-                                            <FaCoins className="text-amber-500" size={16} />
-                                            <div>
-                                                <p className="text-[9px] text-amber-600 font-bold uppercase">Coin</p>
-                                                <p className="text-sm font-black text-amber-700">{(user?.coin ?? 0).toLocaleString()}</p>
-                                            </div>
+                                )}
+                            </div>
+
+                            <div className="border-t border-slate-200 divide-y divide-slate-100">
+                                <div className="flex items-center justify-between p-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-emerald-500/10 text-emerald-600 rounded-lg">
+                                            <FaLanguage size={18} />
                                         </div>
-                                        <div className="flex-1 flex items-center gap-2 bg-purple-50 rounded-xl p-2.5 border border-purple-100">
-                                            <FaTrophy className="text-purple-500" size={16} />
-                                            <div>
-                                                <p className="text-[9px] text-purple-600 font-bold uppercase">XP</p>
-                                                <p className="text-sm font-black text-purple-700">{(user?.xp ?? 0).toLocaleString()}</p>
-                                            </div>
+                                        <span className="font-medium text-sm text-slate-700">{t("profile.language")}</span>
+                                    </div>
+                                    <LanguageSwitcher />
+                                </div>
+
+                                <div className="flex items-center justify-between p-4 hover:bg-slate-50 cursor-pointer transition-all" onClick={handleLogout}>
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-red-500/10 text-red-500 rounded-lg">
+                                            <FaSignOutAlt size={18} />
                                         </div>
+                                        <span className="font-bold text-sm text-red-500">{t("auth.logout")}</span>
                                     </div>
                                 </div>
-                            )}
+                            </div>
                         </div>
 
-                        <div className="rounded-3xl border border-slate-200 overflow-hidden shadow-sm bg-white">
-                            <div className="flex items-center justify-between p-4 border-b border-slate-100 cursor-default">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 rounded-lg bg-yellow-500/10 text-yellow-600"><FaSun /></div>
-                                    <span className="font-medium text-sm text-slate-700">{t("profile.appearance")}</span>
+
+                        <NavLink to="/coinstore" className="block mt-4 bg-linear-to-r from-amber-400 to-yellow-500 p-0.5 rounded-3xl shadow-lg shadow-amber-200/40">
+                            <div className="bg-white rounded-[1.75rem] p-5 flex items-center justify-between hover:bg-amber-50/30 transition-colors">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-linear-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-md">
+                                        <FaCoins className="text-white text-xl" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-black text-slate-900 italic leading-none text-lg">COİN MAĞAZASI</h4>
+                                        <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">
+                                            Avatar, ikon, köməklər — {(user?.coin ?? 0).toLocaleString()} Coin
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="w-10 h-5 rounded-full relative bg-yellow-400">
-                                    <div className="absolute top-1 w-3 h-3 bg-white rounded-full right-1"></div>
+                                <div className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center">
+                                    <MdKeyboardArrowRight size={24} />
                                 </div>
                             </div>
+                        </NavLink>
 
-                            <div className="flex items-center justify-between p-4 border-b border-slate-100">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-emerald-500/10 text-emerald-600 rounded-lg"><FaLanguage size={18} /></div>
-                                    <span className="font-medium text-sm text-slate-700">{t("profile.language")}</span>
-                                </div>
-                                <LanguageSwitcher />
-                            </div>
 
-                            <div className="flex items-center justify-between p-4 border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-all">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-orange-500/10 text-orange-600 rounded-lg"><FaHistory size={18} /></div>
-                                    <span className="font-medium text-sm text-slate-700">{t("profile.gameHistory")}</span>
+                        <div className="bg-linear-to-r from-yellow-400 to-orange-500 p-0.5 rounded-4xl shadow-lg shadow-orange-200/40">
+                            <div className="bg-white rounded-[1.9rem] p-5 flex items-center justify-between">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-yellow-100 rounded-2xl flex items-center justify-center">
+                                        <FaCrown className="text-yellow-600 text-2xl animate-bounce" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-black text-slate-900 italic leading-none text-lg">{t("profile.vipStore")}</h4>
+                                        <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Özəl üstünlükləri kəşf et</p>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-2 text-slate-400">
-                                    <span className="text-xs font-bold">{totalGames}</span>
-                                    <MdKeyboardArrowRight size={20} />
-                                </div>
-                            </div>
-
-                            <div className="flex items-center justify-between p-4 border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-all">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-purple-500/10 text-purple-600 rounded-lg"><FaShieldAlt size={18} /></div>
-                                    <span className="font-medium text-sm text-slate-700">{t("profile.security")}</span>
-                                </div>
-                                <MdKeyboardArrowRight className="text-slate-300" size={20} />
-                            </div>
-
-                            <div className="flex items-center justify-between p-4 hover:bg-slate-50 cursor-pointer transition-all" onClick={handleLogout}>
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-red-500/10 text-red-500 rounded-lg"><FaSignOutAlt size={18} /></div>
-                                    <span className="font-bold text-sm text-red-500">{t("auth.logout")}</span>
-                                </div>
+                                <NavLink to="/shop">
+                                    <button className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-md">
+                                        <MdKeyboardArrowRight size={24} />
+                                    </button>
+                                </NavLink>
                             </div>
                         </div>
 
@@ -181,6 +197,9 @@ function ProfilePage() {
                                 <FaUserPlus />
                             </div>
                         </div>
+
+
+
                     </div>
 
                     <div className="lg:col-span-7 space-y-6">
@@ -272,43 +291,7 @@ function ProfilePage() {
                 <GameAnalyticsCard />
                 <GameHistoryCard />
 
-                <div className="bg-linear-to-r from-yellow-400 to-orange-500 p-0.5 rounded-4xl shadow-lg shadow-orange-200/40">
-                    <div className="bg-white rounded-[1.9rem] p-5 flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-yellow-100 rounded-2xl flex items-center justify-center">
-                                <FaCrown className="text-yellow-600 text-2xl animate-bounce" />
-                            </div>
-                            <div>
-                                <h4 className="font-black text-slate-900 italic leading-none text-lg">{t("profile.vipStore")}</h4>
-                                <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Özəl üstünlükləri kəşf et</p>
-                            </div>
-                        </div>
-                        <NavLink to="/shop">
-                            <button className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-md">
-                                <MdKeyboardArrowRight size={24} />
-                            </button>
-                        </NavLink>
-                    </div>
-                </div>
 
-                <NavLink to="/coinstore" className="block mt-4 bg-linear-to-r from-amber-400 to-yellow-500 p-0.5 rounded-3xl shadow-lg shadow-amber-200/40">
-                    <div className="bg-white rounded-[1.75rem] p-5 flex items-center justify-between hover:bg-amber-50/30 transition-colors">
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-linear-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-md">
-                                <FaCoins className="text-white text-xl" />
-                            </div>
-                            <div>
-                                <h4 className="font-black text-slate-900 italic leading-none text-lg">COİN MAĞAZASI</h4>
-                                <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">
-                                    Avatar, ikon, köməklər — {(user?.coin ?? 0).toLocaleString()} Coin
-                                </p>
-                            </div>
-                        </div>
-                        <div className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center">
-                            <MdKeyboardArrowRight size={24} />
-                        </div>
-                    </div>
-                </NavLink>
             </div>
         </section>
     );
