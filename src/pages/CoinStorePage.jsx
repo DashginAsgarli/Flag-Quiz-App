@@ -3,14 +3,15 @@ import { useGame } from "../contexts/GameContext";
 import { useAuth } from "../contexts/AuthContext";
 import { useLanguage } from "../contexts/LanguageContext";
 import { AVATAR_FRAMES, PROFILE_ICONS, TITLES, GAME_HINTS, RARITY_COLORS } from "../utils/shopItems";
-import { FaCoins, FaCheck, FaLock } from "react-icons/fa";
-import { MdVerified } from "react-icons/md";
+import {  HiCircleStack, HiCheck, HiLockClosed, HiCheckCircle, HiExclamationTriangle,  HiTrophy, HiGlobeAmericas, HiAcademicCap, HiSparkles, HiBolt, HiStar,  HiScissors, HiClock, HiEye, HiForward, HiArrowTrendingUp} from "react-icons/hi2";
+import { MdVerified, MdOutlineCircle, MdOutlineWaterDrop, MdHelpOutline, MdDiamond, MdLocalFireDepartment } from "react-icons/md";
+import { FiGrid, FiSmile, FiAward, FiZap } from "react-icons/fi";
 
 const TABS = [
-  { id: "frames", label: "Çərçivələr", emoji: "🖼️" },
-  { id: "icons", label: "İkonlar", emoji: "😀" },
-  { id: "titles", label: "Titullar", emoji: "🏆" },
-  { id: "hints", label: "Köməklər", emoji: "⚡" },
+  { id: "frames", label: "Çərçivələr", emoji: <FiGrid size={18} /> },
+  { id: "icons", label: "İkonlar", emoji: <FiSmile size={18} /> },
+  { id: "titles", label: "Titullar", emoji: <FiAward size={18} /> },
+  { id: "hints", label: "Köməklər", emoji: <FiZap size={18} /> },
 ];
 
 const TAB_ITEMS = {
@@ -18,6 +19,32 @@ const TAB_ITEMS = {
   icons: PROFILE_ICONS,
   titles: TITLES,
   hints: GAME_HINTS,
+};
+
+const renderShopIcon = (iconName) => {
+  switch (iconName) {
+    case "gold": return <HiTrophy className="text-yellow-400" />;
+    case "red": return <MdOutlineCircle className="text-red-500" />;
+    case "blue": return <MdOutlineWaterDrop className="text-blue-500" />;
+    case "rainbow": return <MdHelpOutline className="text-purple-500" />;
+    case "diamond": return <MdDiamond className="text-cyan-400" />;
+    case "fire": return <MdLocalFireDepartment className="text-orange-500" />;
+    case "astronaut": return <HiSparkles className="text-slate-600" />;
+    case "globe": return <HiGlobeAmericas className="text-emerald-500" />;
+    case "crown": return <HiAcademicCap className="text-amber-500" />;
+    case "crown_purple": return <HiAcademicCap className="text-purple-500" />;
+    case "globe_blue": return <HiGlobeAmericas className="text-blue-500" />;
+    case "dragon": return <MdLocalFireDepartment className="text-red-600" />;
+    case "lightning": return <HiBolt className="text-yellow-400" />;
+    case "star": return <HiStar className="text-yellow-400" />;
+    case "ninja": return <HiAcademicCap className="text-slate-800" />;
+    case "cut": return <HiScissors className="text-slate-600" />;
+    case "time": return <HiClock className="text-blue-500" />;
+    case "eye": return <HiEye className="text-emerald-500" />;
+    case "forward": return <HiForward className="text-slate-600" />;
+    case "double": return <HiArrowTrendingUp className="text-purple-500" />;
+    default: return <HiLockClosed className="text-slate-300 text-xl" />;
+  }
 };
 
 function CoinStorePage() {
@@ -52,13 +79,13 @@ function CoinStorePage() {
   const items = TAB_ITEMS[activeTab] ?? [];
 
   return (
-    <section className="min-h-screen py-6 md:py-10 px-4 bg-linear-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
-      <div className="max-w-5xl mx-auto">
+    <section className=" py-6 md:py-10 px-4 md:px-10 bg-linear-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
+      <div>
 
         {toast && (
           <div className={`fixed top-20 left-1/2 -translate-x-1/2 z-9999 px-6 py-3 rounded-2xl shadow-2xl font-bold text-sm flex items-center gap-2 transition-all
             ${toast.type === "error" ? "bg-red-600 text-white" : "bg-emerald-500 text-white"}`}>
-            {toast.type === "error" ? "⚠️" : "✅"} {toast.msg}
+            {toast.type === "error" ? <HiExclamationTriangle size={16} /> : <HiCheckCircle size={16} />} {toast.msg}
           </div>
         )}
 
@@ -69,7 +96,7 @@ function CoinStorePage() {
           </div>
           <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-2xl shadow-sm">
             <div className="w-8 h-8 bg-linear-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center shadow-md">
-              <FaCoins className="text-white text-sm" />
+              <HiCircleStack className="text-white text-base" />
             </div>
             <div>
               <p className="text-[9px] text-slate-400 font-bold uppercase">Balans</p>
@@ -87,18 +114,19 @@ function CoinStorePage() {
             <div className="flex flex-wrap gap-2">
               {user.equippedFrame && (
                 <div className="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-xl">
-                  <span className="text-sm">{AVATAR_FRAMES.find(f => f.id === user.equippedFrame)?.emoji}</span>
+                  <span className="text-sm flex items-center">{renderShopIcon(AVATAR_FRAMES.find(f => f.id === user.equippedFrame)?.iconName)}</span>
                   <span className="text-xs font-bold text-amber-700">{AVATAR_FRAMES.find(f => f.id === user.equippedFrame)?.name}</span>
                 </div>
               )}
               {user.equippedIcon && (
                 <div className="flex items-center gap-1.5 bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-xl">
-                  <span className="text-sm">{PROFILE_ICONS.find(i => i.id === user.equippedIcon)?.emoji}</span>
+                  <span className="text-sm flex items-center">{renderShopIcon(PROFILE_ICONS.find(i => i.id === user.equippedIcon)?.iconName)}</span>
                   <span className="text-xs font-bold text-blue-700">{PROFILE_ICONS.find(i => i.id === user.equippedIcon)?.name}</span>
                 </div>
               )}
               {user.equippedTitle && (
                 <div className="flex items-center gap-1.5 bg-purple-50 border border-purple-200 px-3 py-1.5 rounded-xl">
+                  <span className="text-sm flex items-center">{renderShopIcon(TITLES.find(ti => ti.id === user.equippedTitle)?.iconName)}</span>
                   <span className="text-xs font-bold text-purple-700">{TITLES.find(ti => ti.id === user.equippedTitle)?.display}</span>
                 </div>
               )}
@@ -131,7 +159,7 @@ function CoinStorePage() {
                 </div>
 
                 <div className={`w-16 h-16 flex items-center justify-center rounded-2xl text-4xl ${rarity.bg} ${equipped ? "ring-2 ring-blue-400" : ""}`}>
-                  {item.emoji ?? "🎁"}
+                  {renderShopIcon(item.iconName)}
                 </div>
 
                 <div className="text-center">
@@ -148,11 +176,11 @@ function CoinStorePage() {
                     </div>
                   ) : owned ? (
                     <button onClick={() => handleEquip(item)} className="w-full py-2 bg-emerald-500 text-white rounded-xl font-bold text-xs hover:bg-emerald-600 transition-colors flex items-center justify-center gap-1.5">
-                      <FaCheck size={10} /> Gey
+                      <HiCheck size={12} /> Gey
                     </button>
                   ) : (
                     <button onClick={() => handleBuy(item)} disabled={!canAfford || user?.isGuest} className={`w-full py-2 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5    ${canAfford && !user?.isGuest ? "bg-slate-900 text-white hover:bg-red-600 hover:shadow-md active:scale-95" : "bg-slate-100 text-slate-400 cursor-not-allowed"}`}>
-                      {!canAfford && !user?.isGuest ? <><FaLock size={9} /> {item.price} 🪙</> : <><FaCoins size={9} className="text-amber-400" /> {item.price}</>}
+                      {!canAfford && !user?.isGuest ? <><HiLockClosed size={11} /> {item.price} 🪙</> : <><HiCircleStack size={11} className="text-amber-400" /> {item.price}</>}
                     </button>
                   )}
                 </div>
@@ -171,7 +199,7 @@ function CoinStorePage() {
               Oyna
             </a>
             <a href="/shop" className="px-4 py-2 bg-yellow-500 text-slate-900 text-xs font-bold rounded-xl hover:bg-yellow-400 transition-colors flex items-center gap-1">
-              <FaCoins size={10} /> Al
+              <HiCircleStack size={12} /> Al
             </a>
           </div>
         </div>
@@ -180,4 +208,4 @@ function CoinStorePage() {
   );
 }
 
-export default  CoinStorePage
+export default CoinStorePage;

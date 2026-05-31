@@ -85,13 +85,13 @@ function ProfilePage() {
                                             ) : (
                                                 <>
                                                     <div className="flex items-center gap-2">
-                                                        <h3 className="font-bold text-base text-slate-900 truncate">{user.name}</h3>
-                                                        <button onClick={() => { setEditName(user.name); setEditNick(user.nickname); setEditMode(true); }} className="text-slate-400 hover:text-slate-600 transition-colors">
+                                                        <h3 className="font-bold text-base text-slate-900 truncate">{user?.name}</h3>
+                                                        <button onClick={() => { setEditName(user?.name ?? ""); setEditNick(user?.nickname ?? ""); setEditMode(true); }} className="text-slate-400 hover:text-slate-600 transition-colors">
                                                             <FaEdit size={12} />
                                                         </button>
                                                     </div>
-                                                    <p className="text-xs text-slate-500">@{user.nickname}</p>
-                                                    <p className="text-[10px] text-slate-400 mt-1">{user.email}</p>
+                                                    <p className="text-xs text-slate-500">@{user?.nickname}</p>
+                                                    <p className="text-[10px] text-slate-400 mt-1">{user?.email}</p>
                                                 </>
                                             )}
                                         </div>
@@ -101,14 +101,14 @@ function ProfilePage() {
                                             <FaCoins className="text-amber-500" size={16} />
                                             <div>
                                                 <p className="text-[9px] text-amber-600 font-bold uppercase">Coin</p>
-                                                <p className="text-sm font-black text-amber-700">{(user.coin ?? 0).toLocaleString()}</p>
+                                                <p className="text-sm font-black text-amber-700">{(user?.coin ?? 0).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="flex-1 flex items-center gap-2 bg-purple-50 rounded-xl p-2.5 border border-purple-100">
                                             <FaTrophy className="text-purple-500" size={16} />
                                             <div>
                                                 <p className="text-[9px] text-purple-600 font-bold uppercase">XP</p>
-                                                <p className="text-sm font-black text-purple-700">{(user.xp ?? 0).toLocaleString()}</p>
+                                                <p className="text-sm font-black text-purple-700">{(user?.xp ?? 0).toLocaleString()}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -291,7 +291,6 @@ function ProfilePage() {
                     </div>
                 </div>
 
-
                 <NavLink to="/coinstore" className="block mt-4 bg-linear-to-r from-amber-400 to-yellow-500 p-0.5 rounded-3xl shadow-lg shadow-amber-200/40">
                     <div className="bg-white rounded-[1.75rem] p-5 flex items-center justify-between hover:bg-amber-50/30 transition-colors">
                         <div className="flex items-center gap-4">
@@ -315,4 +314,4 @@ function ProfilePage() {
     );
 }
 
-export default ProfilePage
+export default ProfilePage;
