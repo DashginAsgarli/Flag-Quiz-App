@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom"; // BrowserRouter yerinə HashRouter import etdik
 import "./index.css";
 import App from "./App.jsx";
 
@@ -12,7 +12,7 @@ import { GameProvider } from "./contexts/GameContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter> =
       <AuthProvider>
         <ThemeProvider>
           <LanguageProvider>
@@ -24,6 +24,6 @@ createRoot(document.getElementById("root")).render(
           </LanguageProvider>
         </ThemeProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
