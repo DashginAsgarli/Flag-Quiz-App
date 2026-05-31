@@ -60,7 +60,6 @@ function ShopPage() {
   return (
     <section className="min-h-screen py-6 md:py-12 px-4 md:px-6 bg-linear-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
       <div className="max-w-7xl mx-auto">
-
         {guestWarn && (
           <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex items-center justify-between gap-4">
             <p className="text-sm font-bold text-amber-800">{t("auth.mustLogin")}</p>
@@ -173,34 +172,7 @@ function ShopPage() {
           <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-red-600/10 rounded-full blur-[60px] md:blur-[80px]"></div>
         </div>
 
-        <div className="mt-6 relative group">
-          <div className="absolute -inset-0.5 bg-yellow-500/20 rounded-[1.2rem] blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div className="relative bg-[#0f172a] rounded-2xl p-0.5 border border-white/5 overflow-hidden">
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-3 md:p-4 gap-3 md:gap-6">
-              <div className="flex items-center gap-3 md:gap-4 text-left w-full md:w-auto">
-                <div className="relative shrink-0">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-linear-to-br from-yellow-500/90 to-orange-600/90 rounded-lg flex items-center justify-center">
-                    <FaCoins className="text-white text-xl md:text-2xl" />
-                  </div>
-                  <MdStars className="absolute -top-1 -right-1 text-yellow-300/80 text-sm md:text-base" />
-                </div>
-                <div className="flex flex-col">
-                  <h3 className="text-sm md:text-lg font-black text-white italic tracking-tight leading-none">
-                    {t("shop.daily")} <span className="text-yellow-500">HƏDİYYƏ</span>
-                  </h3>
-                  <p className="text-slate-500 text-[10px] md:text-xs mt-1 font-medium leading-none">Günün şansını yoxla və qazan!</p>
-                </div>
-              </div>
-              <div className="shrink-0 w-full md:w-auto">
-                <button  onClick={() => { addCoin(50); alert("🎉 +50 Coin qazandınız!"); }}  className="relative w-full md:w-auto overflow-hidden px-5 py-2 md:px-7 md:py-2.5 bg-yellow-500 rounded-lg hover:brightness-110 active:scale-95 shadow-sm">
-                  <span className="relative z-10 flex items-center justify-center gap-2 text-slate-950 font-black text-[10px] md:text-xs uppercase tracking-tighter">
-                    <MdFlashOn size={14} /> {t("shop.win")}
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 mt-16">
           {[
