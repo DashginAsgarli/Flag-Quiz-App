@@ -3,7 +3,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🌍%20Live%20Demo-Play%20Now-22c55e?style=for-the-badge)](https://gleaming-pudding-920aba.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/🌍%20Live%20Demo-Play%20Now-22c55e?style=for-the-badge)](https://dashginasgarli.github.io/flag-quiz-app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/DashginAsgarli/flag-quiz-app)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://netlify.com)
