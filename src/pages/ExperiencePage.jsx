@@ -12,14 +12,6 @@ function ExperiencePage() {
 
   const CARDS = [
     {
-      to: "/experience/globe",
-      label: "İnteraktiv",
-      title: t("experience.globe"),
-      tag: t("experience.country"),
-      icon: <FaGlobeAmericas />,
-      gradient: "from-yellow-500 to-pink-600",
-    },
-    {
       to: "/experience/list",
       label: "Sənədləşdirilmiş",
       title: t("experience.list"),
@@ -38,10 +30,9 @@ function ExperiencePage() {
   ];
 
   return (
-    <section className="min-h-screen py-6 md:py-12 px-4 md:px-6 bg-linear-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+    <section className="pt-6 md:pt-12 px-4 md:px-6 bg-linear-to-br from-slate-50 via-white to-slate-100 mt-13 md:mt-15">
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
           {CARDS.map(card => (
             <NavLink key={card.to} to={card.to} className={`group relative rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 h-28 sm:h-32 md:h-52 lg:h-64 flex flex-col justify-between overflow-hidden bg-linear-to-br ${card.gradient} text-white transform transition-all duration-500 shadow-md hover:shadow-2xl hover:scale-[1.02] cursor-pointer`}>
               <div className="relative z-20">
@@ -76,7 +67,7 @@ function ExperiencePage() {
           ))}
         </div>
 
-        <div className="relative group overflow-hidden rounded-4xl bg-slate-900 p-6 md:p-8 text-white shadow-xl mb-8 md:mb-12 border border-slate-800 mt-10">
+        <div className="relative group overflow-hidden rounded-2xl md:rounded-3xl bg-slate-900 p-6 md:p-8 text-white shadow-xl border border-slate-800 mt-4 md:mt-8 lg:mt-5 ">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
             <GiGlobe size={180} />
           </div>
