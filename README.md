@@ -15,7 +15,7 @@ To keep players coming back, the app adds a light progression layer on top
 of the quiz itself: a profile with levels and experience points, a
 leaderboard to compare scores, and an in-app store to spend earned points.
 None of this needs a server — everything runs and persists entirely in the
-browser.
+browser (see [Architecture](#architecture)).
 
 ## Features
 
